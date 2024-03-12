@@ -2,142 +2,142 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/contributing/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/davmail/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/dmarc/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/elasticsearch/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/installation/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/kibana/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/mailing-lists/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/output/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/splunk/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/usage/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/cli/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/elastic/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/kafkaclient/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/log/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/loganalytics/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/s3/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/splunk/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/syslog/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/utils/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/mail/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/mail/gmail/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/mail/graph/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/mail/imap/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/mail/mailbox_connection/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/resources/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/resources/dbip/</loc>
-         <lastmod>2024-01-03</lastmod>
+         <lastmod>2024-03-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

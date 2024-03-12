@@ -1065,8 +1065,6 @@
 </code></pre></div>
 
   <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
 
   
       <p>A client for a Splunk HTTP Events Collector (HEC)</p>
@@ -1197,8 +1195,9 @@
 
 <a href="#parsedmarc.splunk.HECClient.save_aggregate_reports_to_splunk" class="headerlink" title="Permanent link">🔗</a></h3>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_aggregate_reports_to_splunk</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aggregate_reports</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]]</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aggregate_reports</span><span class="p">:</span> <span class="n">AggregateReport</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">AggregateReport</span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1221,7 +1220,7 @@
         <tr>
           <td><code>aggregate_reports</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="../#parsedmarc.AggregateReport">AggregateReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="../#parsedmarc.AggregateReport">AggregateReport</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1251,7 +1250,7 @@
 
 <a href="#parsedmarc.splunk.HECClient.save_forensic_reports_to_splunk" class="headerlink" title="Permanent link">🔗</a></h3>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_forensic_reports_to_splunk</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">forensic_reports</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">forensic_reports</span><span class="p">:</span> <span class="n">ForensicReport</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">ForensicReport</span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
 </code></pre></div>
 
@@ -1275,7 +1274,7 @@
         <tr>
           <td><code>forensic_reports</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>, <span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="../#parsedmarc.ForensicReport">ForensicReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="../#parsedmarc.ForensicReport">ForensicReport</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1311,7 +1310,7 @@
 
 
 <a href="#parsedmarc.splunk.SplunkError" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">SplunkError</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">])</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">SplunkError</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="ne">Exception</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">

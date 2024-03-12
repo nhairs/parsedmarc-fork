@@ -1091,17 +1091,15 @@
 
 <a href="#parsedmarc.kafkaclient.KafkaClient" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">KafkaClient</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">kafka_hosts</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">kafka_hosts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ssl_context</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">SSLContext</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ssl_context</span><span class="p">:</span> <span class="n">SSLContext</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code>object</code></p>
 
   
 
@@ -1121,7 +1119,7 @@
         <tr>
           <td><code>kafka_hosts</code></td>
           <td>
-                <code><span title="typing.List">List</span>[str]</code>
+                <code>list[str]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1149,7 +1147,7 @@
         <tr>
           <td><code>username</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1163,7 +1161,7 @@
         <tr>
           <td><code>password</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1177,7 +1175,7 @@
         <tr>
           <td><code>ssl_context</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="ssl.SSLContext">SSLContext</span>]</code>
+                <code><span title="ssl.SSLContext">SSLContext</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1249,11 +1247,10 @@ based on begin and end dates for easier parsing in Kibana.</p>
 
 <a href="#parsedmarc.kafkaclient.KafkaClient.save_aggregate_reports_to_kafka" class="headerlink" title="Permanent link">🔗</a></h3>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_aggregate_reports_to_kafka</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aggregate_reports</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="n">OrderedDict</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="p">],</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">aggregate_topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aggregate_reports</span><span class="p">:</span> <span class="n">AggregateReport</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">AggregateReport</span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">aggregate_topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1276,7 +1273,7 @@ based on begin and end dates for easier parsing in Kibana.</p>
         <tr>
           <td><code>aggregate_reports</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[<span title="collections.OrderedDict">OrderedDict</span>, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="../#parsedmarc.AggregateReport">AggregateReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="../#parsedmarc.AggregateReport">AggregateReport</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1320,7 +1317,7 @@ based on begin and end dates for easier parsing in Kibana.</p>
 
 <a href="#parsedmarc.kafkaclient.KafkaClient.save_forensic_reports_to_kafka" class="headerlink" title="Permanent link">🔗</a></h3>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_forensic_reports_to_kafka</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">forensic_reports</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">forensic_reports</span><span class="p">:</span> <span class="n">ForensicReport</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">ForensicReport</span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">forensic_topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
@@ -1347,7 +1344,7 @@ by default.</p>
         <tr>
           <td><code>forensic_reports</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[<span title="collections.OrderedDict">OrderedDict</span>, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="../#parsedmarc.ForensicReport">ForensicReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="../#parsedmarc.ForensicReport">ForensicReport</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1425,7 +1422,7 @@ with Elastic output.</p>
 
 
 <a href="#parsedmarc.kafkaclient.KafkaError" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">KafkaError</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">])</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">KafkaError</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="ne">Exception</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">

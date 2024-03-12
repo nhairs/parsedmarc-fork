@@ -1120,7 +1120,7 @@
 
 
 <a href="#parsedmarc.elastic.ElasticsearchError" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ElasticsearchError</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="ne">Exception</span><span class="p">])</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ElasticsearchError</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="ne">Exception</span><span class="p">)</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1164,9 +1164,8 @@
 
 <a href="#parsedmarc.elastic.create_indexes" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">create_indexes</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">names</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">settings</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">names</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">settings</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1189,7 +1188,7 @@
         <tr>
           <td><code>names</code></td>
           <td>
-                <code><span title="typing.List">List</span>[str]</code>
+                <code>list[str]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1203,7 +1202,7 @@
         <tr>
           <td><code>settings</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Dict">Dict</span>[str, int]]</code>
+                <code>dict[str, int] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1233,8 +1232,8 @@
 
 <a href="#parsedmarc.elastic.migrate_indexes" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">migrate_indexes</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aggregate_indexes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">forensic_indexes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aggregate_indexes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">forensic_indexes</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
 </code></pre></div>
 
@@ -1258,7 +1257,7 @@
         <tr>
           <td><code>aggregate_indexes</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1272,7 +1271,7 @@
         <tr>
           <td><code>forensic_indexes</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1302,8 +1301,8 @@
 
 <a href="#parsedmarc.elastic.save_aggregate_report_to_elasticsearch" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_aggregate_report_to_elasticsearch</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aggregate_report</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">index_suffix</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">report</span><span class="p">:</span> <span class="n">AggregateReport</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">index_suffix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">monthly_indexes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">number_of_shards</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">number_of_replicas</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
@@ -1328,9 +1327,9 @@
     </thead>
     <tbody>
         <tr>
-          <td><code>aggregate_report</code></td>
+          <td><code>report</code></td>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.Any">Any</span>]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="../#parsedmarc.AggregateReport">AggregateReport</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1344,7 +1343,7 @@
         <tr>
           <td><code>index_suffix</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1416,8 +1415,8 @@
 
 <a href="#parsedmarc.elastic.save_forensic_report_to_elasticsearch" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_forensic_report_to_elasticsearch</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">forensic_report</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">index_suffix</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">report</span><span class="p">:</span> <span class="n">ForensicReport</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">index_suffix</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">monthly_indexes</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">number_of_shards</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">number_of_replicas</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
@@ -1442,9 +1441,9 @@
     </thead>
     <tbody>
         <tr>
-          <td><code>forensic_report</code></td>
+          <td><code>report</code></td>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.Any">Any</span>]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="../#parsedmarc.ForensicReport">ForensicReport</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1458,7 +1457,7 @@
         <tr>
           <td><code>index_suffix</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1530,12 +1529,12 @@
 
 <a href="#parsedmarc.elastic.set_hosts" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">set_hosts</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">hosts</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">hosts</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">use_ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">ssl_cert_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">apiKey</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">ssl_cert_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">apiKey</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">60.0</span><span class="p">,</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
@@ -1560,7 +1559,7 @@
         <tr>
           <td><code>hosts</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[str, <span title="typing.List">List</span>[str]]</code>
+                <code>str | list[str]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1588,7 +1587,7 @@
         <tr>
           <td><code>ssl_cert_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1602,7 +1601,7 @@
         <tr>
           <td><code>username</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1616,7 +1615,7 @@
         <tr>
           <td><code>password</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1630,7 +1629,7 @@
         <tr>
           <td><code>apiKey</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">

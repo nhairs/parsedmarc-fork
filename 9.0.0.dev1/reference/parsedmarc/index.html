@@ -879,6 +879,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#parsedmarc.AggregateReport" class="md-nav__link">
+    <span class="md-ellipsis">
+      AggregateReport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.ForensicReport" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForensicReport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#parsedmarc.InvalidAggregateReport" class="md-nav__link">
     <span class="md-ellipsis">
       InvalidAggregateReport
@@ -911,6 +929,48 @@
       ParserError
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.Report" class="md-nav__link">
+    <span class="md-ellipsis">
+      Report
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.ReportParser" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReportParser
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.SortedReportContainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      SortedReportContainer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SortedReportContainer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.SortedReportContainer.add_report" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_report()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1107,6 +1167,56 @@
 
 
 
+<h2 id="parsedmarc.AggregateReport" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">AggregateReport</span>
+
+
+<a href="#parsedmarc.AggregateReport" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">AggregateReport</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.Report" href="#parsedmarc.Report">Report</a></code></p>
+
+  
+      <p>A DMARC Aggregate Report</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="parsedmarc.ForensicReport" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">ForensicReport</span>
+
+
+<a href="#parsedmarc.ForensicReport" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ForensicReport</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.Report" href="#parsedmarc.Report">Report</a></code></p>
+
+  
+      <p>A DMARC Forensic Report</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
 <h2 id="parsedmarc.InvalidAggregateReport" class="doc doc-heading">
           <span class="doc doc-object-name doc-class-name">InvalidAggregateReport</span>
 
@@ -1198,6 +1308,207 @@
 
 </div>
 
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="parsedmarc.Report" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">Report</span>
+
+
+<a href="#parsedmarc.Report" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Report</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">])</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Base class for all reports</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="parsedmarc.ReportParser" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">ReportParser</span>
+
+
+<a href="#parsedmarc.ReportParser" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ReportParser</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  
+      <p>DMARC Report Parser</p>
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="parsedmarc.SortedReportContainer" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">SortedReportContainer</span>
+
+
+<a href="#parsedmarc.SortedReportContainer" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">SortedReportContainer</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">existing_aggregate_reports</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">AggregateReport</span><span class="p">]</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">existing_forensic_reports</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">ForensicReport</span><span class="p">]</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+
+
+  
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="parsedmarc.SortedReportContainer.add_report" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">add_report</span>
+
+
+<a href="#parsedmarc.SortedReportContainer.add_report" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">add_report</span><span class="p">(</span><span class="n">report</span><span class="p">:</span> <span class="n">Report</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Add a report to this container returning the added type.</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>report</code></td>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.Report" href="#parsedmarc.Report">Report</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the report to add</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the type of report added</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+
+  </div>
+
+  </div>
+
+</div>
+
 
 
 <div class="doc doc-object doc-function">
@@ -1211,20 +1522,20 @@
 
 <a href="#parsedmarc.email_results" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">email_results</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">results</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">results</span><span class="p">:</span> <span class="n">SortedReportContainer</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">host</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">mail_from</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">mail_to</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">mail_cc</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">mail_bcc</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">mail_to</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">mail_cc</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">mail_bcc</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">port</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">require_encryption</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">verify</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">username</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">password</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">subject</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">attachment_filename</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">subject</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">attachment_filename</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">message</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
@@ -1248,7 +1559,7 @@
         <tr>
           <td><code>results</code></td>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.SortedReportContainer" href="#parsedmarc.SortedReportContainer">SortedReportContainer</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1290,7 +1601,7 @@
         <tr>
           <td><code>mail_to</code></td>
           <td>
-                <code><span title="typing.List">List</span>[str]</code>
+                <code>list[str]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1304,7 +1615,7 @@
         <tr>
           <td><code>mail_cc</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1318,7 +1629,7 @@
         <tr>
           <td><code>mail_bcc</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1374,7 +1685,7 @@
         <tr>
           <td><code>username</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1388,7 +1699,7 @@
         <tr>
           <td><code>password</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1402,7 +1713,7 @@
         <tr>
           <td><code>subject</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1416,7 +1727,7 @@
         <tr>
           <td><code>attachment_filename</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1430,7 +1741,7 @@
         <tr>
           <td><code>message</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1459,7 +1770,7 @@
 
 
 <a href="#parsedmarc.extract_xml" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">extract_xml</span><span class="p">(</span><span class="n">input_</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">BinaryIO</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">extract_xml</span><span class="p">(</span><span class="n">input_</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="n">BinaryIO</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1482,7 +1793,7 @@
         <tr>
           <td><code>input_</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[str, bytes, <span title="typing.BinaryIO">BinaryIO</span>]</code>
+                <code>str | bytes | <span title="typing.BinaryIO">BinaryIO</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1541,17 +1852,15 @@
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">archive_folder</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Archive&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">test</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">results</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]]</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">create_folders</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]]</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">results</span><span class="p">:</span> <span class="n">SortedReportContainer</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">create_folders</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SortedReportContainer</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1644,7 +1953,7 @@
         <tr>
           <td><code>ip_db_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1672,7 +1981,7 @@
         <tr>
           <td><code>nameservers</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1714,7 +2023,7 @@
         <tr>
           <td><code>results</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.SortedReportContainer" href="#parsedmarc.SortedReportContainer">SortedReportContainer</a> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1762,18 +2071,18 @@
   <table>
     <thead>
       <tr>
-<th>Name</th>        <th>Type</th>
+        <th>Type</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
         <tr>
-<td><code>OrderedDict</code></td>          <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.SortedReportContainer" href="#parsedmarc.SortedReportContainer">SortedReportContainer</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Lists of <code>aggregate_reports</code> and <code>forensic_reports</code></p>
+              <p>collected reported</p>
             </div>
           </td>
         </tr>
@@ -1797,13 +2106,13 @@
 <a href="#parsedmarc.get_dmarc_reports_from_mbox" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_dmarc_reports_from_mbox</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">input_</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">parallel</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]]</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SortedReportContainer</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1840,7 +2149,7 @@
         <tr>
           <td><code>nameservers</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1882,7 +2191,7 @@
         <tr>
           <td><code>ip_db_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -1937,11 +2246,11 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.SortedReportContainer" href="#parsedmarc.SortedReportContainer">SortedReportContainer</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Dictionary of Lists of <code>aggregate_reports</code> and <code>forensic_reports</code></p>
+              <p>container of reports</p>
             </div>
           </td>
         </tr>
@@ -1963,9 +2272,7 @@
 
 
 <a href="#parsedmarc.get_report_zip" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_report_zip</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">results</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]]</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">get_report_zip</span><span class="p">(</span><span class="n">results</span><span class="p">:</span> <span class="n">SortedReportContainer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -1988,7 +2295,7 @@
         <tr>
           <td><code>results</code></td>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.SortedReportContainer" href="#parsedmarc.SortedReportContainer">SortedReportContainer</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2042,14 +2349,14 @@
 
 <a href="#parsedmarc.parse_aggregate_report_file" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_aggregate_report_file</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">_input</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="n">BinaryIO</span><span class="p">],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">_input</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">BinaryIO</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">parallel</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AggregateReport</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -2072,7 +2379,7 @@
         <tr>
           <td><code>_input</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[bytes, str, <span title="typing.BinaryIO">BinaryIO</span>]</code>
+                <code>bytes | str | <span title="typing.BinaryIO">BinaryIO</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2100,7 +2407,7 @@
         <tr>
           <td><code>ip_db_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2114,7 +2421,7 @@
         <tr>
           <td><code>nameservers</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2157,7 +2464,7 @@
         <tr>
           <td><code>keep_alive</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>]</code>
+                <code><span title="typing.Callable">Callable</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2184,7 +2491,7 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.Any">Any</span>]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="#parsedmarc.AggregateReport">AggregateReport</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2212,18 +2519,18 @@
 <a href="#parsedmarc.parse_aggregate_report_xml" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_aggregate_report_xml</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">xml</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">parallel</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AggregateReport</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Parses a DMARC XML report string and returns a consistent OrderedDict</p>
+      <p>Parses a DMARC XML report string and returns an AggregateReport</p>
 
 
 
@@ -2255,7 +2562,7 @@
         <tr>
           <td><code>ip_db_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2283,7 +2590,7 @@
         <tr>
           <td><code>nameservers</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2325,7 +2632,7 @@
         <tr>
           <td><code>keep_alive</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>]</code>
+                <code><span title="typing.Callable">Callable</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2352,7 +2659,7 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.Any">Any</span>]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="#parsedmarc.AggregateReport">AggregateReport</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2383,17 +2690,17 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">sample</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">msg_date</span><span class="p">:</span> <span class="n">datetime</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">parallel</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ForensicReport</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
   
-      <p>Converts a DMARC forensic report and sample to a <code>OrderedDict</code></p>
+      <p>Converts a DMARC forensic report and sample to a ForensicReport</p>
 
 
 
@@ -2467,7 +2774,7 @@
         <tr>
           <td><code>ip_db_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2550,7 +2857,7 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span></code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="#parsedmarc.ForensicReport">ForensicReport</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2577,15 +2884,15 @@
 
 <a href="#parsedmarc.parse_report_email" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_report_email</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">input_</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">bytes</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">input_</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">parallel</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">]]</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Report</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -2608,7 +2915,7 @@
         <tr>
           <td><code>input_</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[bytes, str]</code>
+                <code>bytes | str</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2636,7 +2943,7 @@
         <tr>
           <td><code>ip_db_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2650,7 +2957,7 @@
         <tr>
           <td><code>nameservers</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2706,7 +3013,7 @@
         <tr>
           <td><code>keep_alive</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>]</code>
+                <code><span title="typing.Callable">Callable</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2733,11 +3040,11 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.Union">Union</span>[str, <span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.Report" href="#parsedmarc.Report">Report</a></code>
           </td>
           <td>
             <div class="doc-md-description">
-              <p>Dictionary of <code>{"report_type": "aggregate" or "forensic", "report": report}</code></p>
+              <p>report container</p>
             </div>
           </td>
         </tr>
@@ -2760,15 +3067,15 @@
 
 <a href="#parsedmarc.parse_report_file" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_report_file</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">input_</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">bytes</span><span class="p">,</span> <span class="n">BinaryIO</span><span class="p">],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">input_</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="n">BinaryIO</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">parallel</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Callable</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OrderedDict</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Report</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -2791,7 +3098,7 @@
         <tr>
           <td><code>input_</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[str, bytes, <span title="typing.BinaryIO">BinaryIO</span>]</code>
+                <code>str | bytes | <span title="typing.BinaryIO">BinaryIO</span></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2805,7 +3112,7 @@
         <tr>
           <td><code>nameservers</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2847,7 +3154,7 @@
         <tr>
           <td><code>ip_db_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2889,7 +3196,7 @@
         <tr>
           <td><code>keep_alive</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Callable">Callable</span>]</code>
+                <code><span title="typing.Callable">Callable</span> | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2916,7 +3223,7 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span></code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.Report" href="#parsedmarc.Report">Report</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -2943,7 +3250,7 @@
 
 <a href="#parsedmarc.parsed_aggregate_reports_to_csv" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parsed_aggregate_reports_to_csv</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">reports</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">reports</span><span class="p">:</span> <span class="n">AggregateReport</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">AggregateReport</span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
 
@@ -2967,7 +3274,7 @@
         <tr>
           <td><code>reports</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[<span title="collections.OrderedDict">OrderedDict</span>, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="#parsedmarc.AggregateReport">AggregateReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="#parsedmarc.AggregateReport">AggregateReport</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3021,8 +3328,8 @@
 
 <a href="#parsedmarc.parsed_aggregate_reports_to_csv_rows" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parsed_aggregate_reports_to_csv_rows</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">reports</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]]</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">bool</span><span class="p">]]]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">reports</span><span class="p">:</span> <span class="n">AggregateReport</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">AggregateReport</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">int</span> <span class="o">|</span> <span class="nb">bool</span><span class="p">]]</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -3045,7 +3352,7 @@
         <tr>
           <td><code>reports</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[<span title="collections.OrderedDict">OrderedDict</span>, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="#parsedmarc.AggregateReport">AggregateReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="#parsedmarc.AggregateReport">AggregateReport</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3072,7 +3379,7 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Union">Union</span>[str, int, bool]]]</code>
+                <code>list[dict[str, str | int | bool]]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3099,7 +3406,7 @@
 
 <a href="#parsedmarc.parsed_forensic_reports_to_csv" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parsed_forensic_reports_to_csv</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">reports</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">reports</span><span class="p">:</span> <span class="n">ForensicReport</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">ForensicReport</span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div>
 
@@ -3123,7 +3430,7 @@
         <tr>
           <td><code>reports</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[<span title="collections.OrderedDict">OrderedDict</span>, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="#parsedmarc.ForensicReport">ForensicReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="#parsedmarc.ForensicReport">ForensicReport</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3177,8 +3484,8 @@
 
 <a href="#parsedmarc.parsed_forensic_reports_to_csv_rows" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parsed_forensic_reports_to_csv_rows</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">reports</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]]</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">reports</span><span class="p">:</span> <span class="n">ForensicReport</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">ForensicReport</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
 </code></pre></div>
 
   <div class="doc doc-contents ">
@@ -3201,7 +3508,7 @@
         <tr>
           <td><code>reports</code></td>
           <td>
-                <code><span title="typing.Union">Union</span>[<span title="collections.OrderedDict">OrderedDict</span>, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="#parsedmarc.ForensicReport">ForensicReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="#parsedmarc.ForensicReport">ForensicReport</a>]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3228,7 +3535,7 @@
     <tbody>
         <tr>
           <td>
-                <code><span title="typing.List">List</span>[<span title="typing.Dict">Dict</span>[str, <span title="typing.Any">Any</span>]]</code>
+                <code>list[dict[str, <span title="typing.Any">Any</span>]]</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3255,7 +3562,7 @@
 
 <a href="#parsedmarc.save_output" class="headerlink" title="Permanent link">🔗</a></h2>
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_output</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">results</span><span class="p">:</span> <span class="n">OrderedDict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">OrderedDict</span><span class="p">]],</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">results</span><span class="p">:</span> <span class="n">SortedReportContainer</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">output_directory</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;output&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">aggregate_json_filename</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;aggregate.json&quot;</span><span class="p">,</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">forensic_json_filename</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;forensic.json&quot;</span><span class="p">,</span>
@@ -3284,7 +3591,7 @@
         <tr>
           <td><code>results</code></td>
           <td>
-                <code><span title="collections.OrderedDict">OrderedDict</span>[str, <span title="typing.List">List</span>[<span title="collections.OrderedDict">OrderedDict</span>]]</code>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.SortedReportContainer" href="#parsedmarc.SortedReportContainer">SortedReportContainer</a></code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3391,12 +3698,12 @@
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">delete</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">test</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">check_timeout</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">batch_size</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
@@ -3518,7 +3825,7 @@
         <tr>
           <td><code>ip_db_path</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[str]</code>
+                <code>str | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3546,7 +3853,7 @@
         <tr>
           <td><code>nameservers</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.List">List</span>[str]]</code>
+                <code>list[str] | None</code>
           </td>
           <td>
             <div class="doc-md-description">
@@ -3588,7 +3895,7 @@
         <tr>
           <td><code>batch_size</code></td>
           <td>
-                <code><span title="typing.Optional">Optional</span>[int]</code>
+                <code>int | None</code>
           </td>
           <td>
             <div class="doc-md-description">
