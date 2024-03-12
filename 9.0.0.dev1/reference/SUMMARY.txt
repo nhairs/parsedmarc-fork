@@ -9,6 +9,8 @@
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> graph](parsedmarc/mail/graph.md)
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> imap](parsedmarc/mail/imap.md)
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> mailbox_connection](parsedmarc/mail/mailbox_connection.md)
+    * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> parser](parsedmarc/parser.md)
+    * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> reports](parsedmarc/reports.md)
     * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> resources](parsedmarc/resources/index.md)
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> dbip](parsedmarc/resources/dbip/index.md)
     * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> s3](parsedmarc/s3.md)

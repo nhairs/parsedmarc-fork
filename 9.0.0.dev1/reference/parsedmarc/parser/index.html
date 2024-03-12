@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/kafkaclient/">
+        <link rel="canonical" href="https://nhairs.github.io/parsedmarc/latest/reference/parsedmarc/parser/">
       
       
-        <link rel="prev" href="../elastic/">
+        <link rel="prev" href="../loganalytics/">
       
       
-        <link rel="next" href="../log/">
+        <link rel="next" href="../reports/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>kafkaclient - ParseDMARC</title>
+        <title>parser - ParseDMARC</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#parsedmarc.kafkaclient" class="md-skip">
+        <a href="#parsedmarc.parser" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> kafkaclient
+              <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> parser
             
           </span>
         </div>
@@ -698,30 +698,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> kafkaclient
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../kafkaclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -730,86 +710,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient" class="md-nav__link">
-    <span class="md-ellipsis">
-      KafkaClient
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="KafkaClient">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient.generate_daterange" class="md-nav__link">
-    <span class="md-ellipsis">
-      generate_daterange()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient.save_aggregate_reports_to_kafka" class="md-nav__link">
-    <span class="md-ellipsis">
-      save_aggregate_reports_to_kafka()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient.save_forensic_reports_to_kafka" class="md-nav__link">
-    <span class="md-ellipsis">
-      save_forensic_reports_to_kafka()
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient.strip_metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      strip_metadata()
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaError" class="md-nav__link">
-    <span class="md-ellipsis">
-      KafkaError
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -861,10 +761,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../parser/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> parser
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -873,6 +793,122 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.InvalidAggregateReport" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidAggregateReport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.InvalidDMARCReport" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidDMARCReport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.InvalidForensicReport" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidForensicReport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ParserError" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParserError
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ReportParser" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReportParser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ReportParser">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ReportParser.parse_aggregate_report_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse_aggregate_report_file()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ReportParser.parse_aggregate_report_xml" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse_aggregate_report_xml()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ReportParser.parse_forensic_report" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse_forensic_report()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ReportParser.parse_report_email" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse_report_email()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ReportParser.parse_report_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse_report_file()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1025,46 +1061,91 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient" class="md-nav__link">
+  <a href="#parsedmarc.parser.InvalidAggregateReport" class="md-nav__link">
     <span class="md-ellipsis">
-      KafkaClient
+      InvalidAggregateReport
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="KafkaClient">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.InvalidDMARCReport" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidDMARCReport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.InvalidForensicReport" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidForensicReport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ParserError" class="md-nav__link">
+    <span class="md-ellipsis">
+      ParserError
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ReportParser" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReportParser
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ReportParser">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient.generate_daterange" class="md-nav__link">
+  <a href="#parsedmarc.parser.ReportParser.parse_aggregate_report_file" class="md-nav__link">
     <span class="md-ellipsis">
-      generate_daterange()
+      parse_aggregate_report_file()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient.save_aggregate_reports_to_kafka" class="md-nav__link">
+  <a href="#parsedmarc.parser.ReportParser.parse_aggregate_report_xml" class="md-nav__link">
     <span class="md-ellipsis">
-      save_aggregate_reports_to_kafka()
+      parse_aggregate_report_xml()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient.save_forensic_reports_to_kafka" class="md-nav__link">
+  <a href="#parsedmarc.parser.ReportParser.parse_forensic_report" class="md-nav__link">
     <span class="md-ellipsis">
-      save_forensic_reports_to_kafka()
+      parse_forensic_report()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaClient.strip_metadata" class="md-nav__link">
+  <a href="#parsedmarc.parser.ReportParser.parse_report_email" class="md-nav__link">
     <span class="md-ellipsis">
-      strip_metadata()
+      parse_report_email()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.parser.ReportParser.parse_report_file" class="md-nav__link">
+    <span class="md-ellipsis">
+      parse_report_file()
     </span>
   </a>
   
@@ -1072,15 +1153,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parsedmarc.kafkaclient.KafkaError" class="md-nav__link">
-    <span class="md-ellipsis">
-      KafkaError
-    </span>
-  </a>
   
 </li>
       
@@ -1107,11 +1179,11 @@
 
 
 
-<h1 id="parsedmarc.kafkaclient" class="doc doc-heading">
-          <span class="doc doc-object-name doc-module-name">parsedmarc.kafkaclient</span>
+<h1 id="parsedmarc.parser" class="doc doc-heading">
+          <span class="doc doc-object-name doc-module-name">parsedmarc.parser</span>
 
 
-<a href="#parsedmarc.kafkaclient" class="headerlink" title="Permanent link">🔗</a></h1>
+<a href="#parsedmarc.parser" class="headerlink" title="Permanent link">🔗</a></h1>
 
   <div class="doc doc-contents first">
 
@@ -1131,328 +1203,20 @@
 
 
 
-<h2 id="parsedmarc.kafkaclient.KafkaClient" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">KafkaClient</span>
+<h2 id="parsedmarc.parser.InvalidAggregateReport" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">InvalidAggregateReport</span>
 
 
-<a href="#parsedmarc.kafkaclient.KafkaClient" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">KafkaClient</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">kafka_hosts</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ssl</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ssl_context</span><span class="p">:</span> <span class="n">SSLContext</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
-</code></pre></div>
+<a href="#parsedmarc.parser.InvalidAggregateReport" class="headerlink" title="Permanent link">🔗</a></h2>
+
 
   <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.parser.InvalidDMARCReport" href="#parsedmarc.parser.InvalidDMARCReport">InvalidDMARCReport</a></code></p>
 
   
+      <p>Raised when an invalid DMARC aggregate report is encountered</p>
 
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>kafka_hosts</code></td>
-          <td>
-                <code>list[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A list of Kafka hostnames (with optional port numbers)</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>ssl</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Use a SSL/TLS connection. This is implied <code>True</code> if <code>username</code> or <code>password</code> is supplied.</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>username</code></td>
-          <td>
-                <code>str | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An optional username</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>password</code></td>
-          <td>
-                <code>str | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An optional password</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>ssl_context</code></td>
-          <td>
-                <code><span title="ssl.SSLContext">SSLContext</span> | None</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>SSL context options</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-<details class="note" open>
-  <summary>Note</summary>
-  <p>When using Azure Event Hubs, the <code>username</code> is literally <code>$ConnectionString</code>, and the <code>password</code> is the
-Azure Event Hub connection string.</p>
-</details>
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-function">
-
-
-
-
-<h3 id="parsedmarc.kafkaclient.KafkaClient.generate_daterange" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">generate_daterange</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
-  </span>
-
-<a href="#parsedmarc.kafkaclient.KafkaClient.generate_daterange" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">generate_daterange</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Creates a date_range timestamp with format YYYY-MM-DD-T-HH:MM:SS
-based on begin and end dates for easier parsing in Kibana.</p>
-<p>Move to utils to avoid duplication w/ elastic?</p>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-
-<h3 id="parsedmarc.kafkaclient.KafkaClient.save_aggregate_reports_to_kafka" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">save_aggregate_reports_to_kafka</span>
-
-
-<a href="#parsedmarc.kafkaclient.KafkaClient.save_aggregate_reports_to_kafka" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_aggregate_reports_to_kafka</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">aggregate_reports</span><span class="p">:</span> <span class="n">AggregateReport</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">AggregateReport</span><span class="p">],</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">aggregate_topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Saves aggregate DMARC reports to Kafka</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>aggregate_reports</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="../reports/#parsedmarc.reports.AggregateReport">AggregateReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.AggregateReport" href="../reports/#parsedmarc.reports.AggregateReport">AggregateReport</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Aggregate reports to save to Kafka</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>aggregate_topic</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the Kafka topic</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-
-<h3 id="parsedmarc.kafkaclient.KafkaClient.save_forensic_reports_to_kafka" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">save_forensic_reports_to_kafka</span>
-
-
-<a href="#parsedmarc.kafkaclient.KafkaClient.save_forensic_reports_to_kafka" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">save_forensic_reports_to_kafka</span><span class="p">(</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">forensic_reports</span><span class="p">:</span> <span class="n">ForensicReport</span> <span class="o">|</span> <span class="nb">list</span><span class="p">[</span><span class="n">ForensicReport</span><span class="p">],</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">forensic_topic</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Saves forensic DMARC reports to Kafka, sends individual
-records (slices) since Kafka requires messages to be &lt;= 1MB
-by default.</p>
-
-
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>forensic_reports</code></td>
-          <td>
-                <code><a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="../reports/#parsedmarc.reports.ForensicReport">ForensicReport</a> | list[<a class="autorefs autorefs-internal" title="parsedmarc.ForensicReport" href="../reports/#parsedmarc.reports.ForensicReport">ForensicReport</a>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Forensic reports to save to Kafka</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>forensic_topic</code></td>
-          <td>
-                <code>str</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The name of the Kafka topic</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-</div>
-
-
-<div class="doc doc-object doc-function">
-
-
-
-
-<h3 id="parsedmarc.kafkaclient.KafkaClient.strip_metadata" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">strip_metadata</span>
-
-  
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
-  </span>
-
-<a href="#parsedmarc.kafkaclient.KafkaClient.strip_metadata" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">strip_metadata</span><span class="p">(</span><span class="n">report</span><span class="p">)</span>
-</code></pre></div>
-
-  <div class="doc doc-contents ">
-  
-      <p>Duplicates org_name, org_email and report_id into JSON root
-and removes report_metadata key to bring it more inline
-with Elastic output.</p>
-
-  </div>
-
-</div>
-
-
-
-  </div>
 
   </div>
 
@@ -1463,20 +1227,104 @@ with Elastic output.</p>
 
 
 
-<h2 id="parsedmarc.kafkaclient.KafkaError" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">KafkaError</span>
+<h2 id="parsedmarc.parser.InvalidDMARCReport" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">InvalidDMARCReport</span>
 
 
-<a href="#parsedmarc.kafkaclient.KafkaError" class="headerlink" title="Permanent link">🔗</a></h2>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">KafkaError</span><span class="p">(</span><span class="n">message</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="ne">Exception</span><span class="p">)</span>
-</code></pre></div>
+<a href="#parsedmarc.parser.InvalidDMARCReport" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.parser.ParserError" href="#parsedmarc.parser.ParserError">ParserError</a></code></p>
+
+  
+      <p>Raised when an invalid DMARC report is encountered</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="parsedmarc.parser.InvalidForensicReport" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">InvalidForensicReport</span>
+
+
+<a href="#parsedmarc.parser.InvalidForensicReport" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+  <div class="doc doc-contents ">
+          <p class="doc doc-class-bases">
+            Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.parser.InvalidDMARCReport" href="#parsedmarc.parser.InvalidDMARCReport">InvalidDMARCReport</a></code></p>
+
+  
+      <p>Raised when an invalid DMARC forensic report is encountered</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="parsedmarc.parser.ParserError" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">ParserError</span>
+
+
+<a href="#parsedmarc.parser.ParserError" class="headerlink" title="Permanent link">🔗</a></h2>
+
 
   <div class="doc doc-contents ">
           <p class="doc doc-class-bases">
             Bases: <code>RuntimeError</code></p>
 
   
-      <p>Raised when a Kafka error occurs</p>
+      <p>Raised whenever the parser fails for some reason</p>
+
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+
+<h2 id="parsedmarc.parser.ReportParser" class="doc doc-heading">
+          <span class="doc doc-object-name doc-class-name">ReportParser</span>
+
+
+<a href="#parsedmarc.parser.ReportParser" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ReportParser</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">offline</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">ip_db_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">nameservers</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">dns_timeout</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+
+  
+      <p>Report Parser</p>
+<p>Parses reports from messages and files.</p>
+<p>Can handled the following types of reports:</p>
+<ul>
+<li>DMARC<ul>
+<li>Aggregate</li>
+<li>Forensic</li>
+</ul>
+</li>
+</ul>
 
 
   
@@ -1490,6 +1338,530 @@ with Elastic output.</p>
 
 
 
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="parsedmarc.parser.ReportParser.parse_aggregate_report_file" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">parse_aggregate_report_file</span>
+
+
+<a href="#parsedmarc.parser.ReportParser.parse_aggregate_report_file" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_aggregate_report_file</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">source</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span> <span class="o">|</span> <span class="n">BinaryIO</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AggregateReport</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Parse a file at the given path, a file-like object. or bytes as an aggregate DMARC report</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>source</code></td>
+          <td>
+                <code>bytes | str | <span title="typing.BinaryIO">BinaryIO</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A path to a file, a file like object, or bytes</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>keep_alive</code></td>
+          <td>
+                <code><span title="typing.Callable">Callable</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Keep alive function</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.reports.AggregateReport" href="../reports/#parsedmarc.reports.AggregateReport">AggregateReport</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The parsed DMARC aggregate report</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="parsedmarc.parser.ReportParser.parse_aggregate_report_xml" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">parse_aggregate_report_xml</span>
+
+
+<a href="#parsedmarc.parser.ReportParser.parse_aggregate_report_xml" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_aggregate_report_xml</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">xml</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">AggregateReport</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Parses a DMARC XML report string and returns an AggregateReport</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>xml</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A string of DMARC aggregate report XML</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>keep_alive</code></td>
+          <td>
+                <code><span title="typing.Callable">Callable</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Keep alive function</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.reports.AggregateReport" href="../reports/#parsedmarc.reports.AggregateReport">AggregateReport</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The parsed aggregate DMARC report</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="parsedmarc.parser.ReportParser.parse_forensic_report" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">parse_forensic_report</span>
+
+
+<a href="#parsedmarc.parser.ReportParser.parse_forensic_report" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_forensic_report</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">feedback_report</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">sample</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">msg_date</span><span class="p">:</span> <span class="n">datetime</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ForensicReport</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Converts a DMARC forensic report and sample to a ForensicReport</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>feedback_report</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A message's feedback report as a string</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>sample</code></td>
+          <td>
+                <code>str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The RFC 822 headers or RFC 822 message sample</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>msg_date</code></td>
+          <td>
+                <code><span title="datetime.datetime">datetime</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The message's date header</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>strip_attachment_payloads</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Remove attachment payloads from forensic report results</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.reports.ForensicReport" href="../reports/#parsedmarc.reports.ForensicReport">ForensicReport</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A parsed report and sample</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="parsedmarc.parser.ReportParser.parse_report_email" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">parse_report_email</span>
+
+
+<a href="#parsedmarc.parser.ReportParser.parse_report_email" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_report_email</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">source</span><span class="p">:</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="nb">str</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Report</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Parse a DMARC report from an email</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>source</code></td>
+          <td>
+                <code>bytes | str</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>An emailed DMARC report in RFC 822 format, as bytes or a string</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>strip_attachment_payloads</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Remove attachment payloads from forensic report results</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>keep_alive</code></td>
+          <td>
+                <code><span title="typing.Callable">Callable</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>keep alive function</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.reports.Report" href="../reports/#parsedmarc.reports.Report">Report</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>the report parsed from the email</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
+
+
+<div class="doc doc-object doc-function">
+
+
+
+
+<h3 id="parsedmarc.parser.ReportParser.parse_report_file" class="doc doc-heading">
+          <span class="doc doc-object-name doc-function-name">parse_report_file</span>
+
+
+<a href="#parsedmarc.parser.ReportParser.parse_report_file" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">parse_report_file</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">source</span><span class="p">:</span> <span class="nb">str</span> <span class="o">|</span> <span class="nb">bytes</span> <span class="o">|</span> <span class="n">BinaryIO</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">strip_attachment_payloads</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">keep_alive</span><span class="p">:</span> <span class="n">Callable</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Report</span>
+</code></pre></div>
+
+  <div class="doc doc-contents ">
+  
+      <p>Parse a DMARC aggregate or forensic file at the given path, a file-like object. or bytes</p>
+
+
+
+  <p><strong>Parameters:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>source</code></td>
+          <td>
+                <code>str | bytes | <span title="typing.BinaryIO">BinaryIO</span></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>A path to a file, a file like object, or bytes</p>
+            </div>
+          </td>
+          <td>
+              <em>required</em>
+          </td>
+        </tr>
+        <tr>
+          <td><code>strip_attachment_payloads</code></td>
+          <td>
+                <code>bool</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Remove attachment payloads from forensic report results</p>
+            </div>
+          </td>
+          <td>
+                <code>False</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>keep_alive</code></td>
+          <td>
+                <code><span title="typing.Callable">Callable</span> | None</code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>Keep alive function</p>
+            </div>
+          </td>
+          <td>
+                <code>None</code>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <p><strong>Returns:</strong></p>
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>
+                <code><a class="autorefs autorefs-internal" title="parsedmarc.reports.Report" href="../reports/#parsedmarc.reports.Report">Report</a></code>
+          </td>
+          <td>
+            <div class="doc-md-description">
+              <p>The parsed DMARC report</p>
+            </div>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+</div>
 
 
 
