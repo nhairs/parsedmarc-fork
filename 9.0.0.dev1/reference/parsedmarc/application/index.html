@@ -18,11 +18,11 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>application - ParseDMARC</title>
+        <title>application - ParseDMARC Fork</title>
       
     
     
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ParseDMARC" class="md-header__button md-logo" aria-label="ParseDMARC" data-md-component="logo">
+    <a href="../../.." title="ParseDMARC Fork" class="md-header__button md-logo" aria-label="ParseDMARC Fork" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
@@ -110,7 +110,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ParseDMARC
+            ParseDMARC Fork
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -229,13 +229,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ParseDMARC" class="md-nav__button md-logo" aria-label="ParseDMARC" data-md-component="logo">
+    <a href="../../.." title="ParseDMARC Fork" class="md-nav__button md-logo" aria-label="ParseDMARC Fork" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
 
     </a>
-    ParseDMARC
+    ParseDMARC Fork
   </label>
   
     <div class="md-nav__source">
@@ -1740,6 +1740,7 @@
 
 
       <p>Worker that handles passing jobs from sources to all sinks</p>
+<p><em>New in 9.0</em>.</p>
 
 
 
@@ -1780,6 +1781,7 @@
 
 
       <p>Worker than handles passing completed jobs from sinks to sources</p>
+<p><em>New in 9.0</em>.</p>
 
 
 
@@ -1814,7 +1816,7 @@
 <div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">SinkWorker</span><span class="p">(</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">sink</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.sink.base.Sink" href="../sink/base/#parsedmarc.sink.base.Sink">Sink</a></span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">in_queue</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="queue.Queue" href="https://docs.python.org/3/library/queue.html#queue.Queue">Queue</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.source.base.Job" href="../source/base/#parsedmarc.source.base.Job">Job</a></span><span class="p">],</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">out_queue</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="queue.Queue" href="https://docs.python.org/3/library/queue.html#queue.Queue">Queue</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.source.base.Job" href="../source/base/#parsedmarc.source.base.Job">Job</a></span><span class="p">,</span> <span class="n"><span title="parsedmarc.source.base.JobStatus">JobStatus</span></span><span class="p">]],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">out_queue</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="queue.Queue" href="https://docs.python.org/3/library/queue.html#queue.Queue">Queue</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.source.base.Job" href="../source/base/#parsedmarc.source.base.Job">Job</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.source.base.JobStatus" href="../source/base/#parsedmarc.source.base.JobStatus">JobStatus</a></span><span class="p">]],</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span>
 </code></pre></div>
 
@@ -1822,6 +1824,9 @@
             <p class="doc doc-class-bases">
               Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.application.Worker" href="#parsedmarc.application.Worker">Worker</a></code></p>
 
+
+      <p>Sink Worker</p>
+<p><em>New in 9.0</em>.</p>
 
 
 
@@ -1870,7 +1875,7 @@
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><a class="autorefs autorefs-external" title="queue.Queue" href="https://docs.python.org/3/library/queue.html#queue.Queue">Queue</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a class="autorefs autorefs-internal" title="parsedmarc.source.base.Job" href="../source/base/#parsedmarc.source.base.Job">Job</a>, <span title="parsedmarc.source.base.JobStatus">JobStatus</span>]]</code>
+                      <code><a class="autorefs autorefs-external" title="queue.Queue" href="https://docs.python.org/3/library/queue.html#queue.Queue">Queue</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#tuple">tuple</a>[<a class="autorefs autorefs-internal" title="parsedmarc.source.base.Job" href="../source/base/#parsedmarc.source.base.Job">Job</a>, <a class="autorefs autorefs-internal" title="parsedmarc.source.base.JobStatus" href="../source/base/#parsedmarc.source.base.JobStatus">JobStatus</a>]]</code>
                   </span>
               </p>
             </td>
@@ -1915,6 +1920,9 @@
             <p class="doc doc-class-bases">
               Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.application.Worker" href="#parsedmarc.application.Worker">Worker</a></code></p>
 
+
+      <p>Source Worker</p>
+<p><em>New in 9.0</em>.</p>
 
 
 
@@ -1996,6 +2004,7 @@
 
       <p>ParseDMARC application with streaming implementation.</p>
 <p>This is a fork of the original ParseDMARC project.</p>
+<p><em>New in 9.0</em>.</p>
 
 
 
@@ -2035,7 +2044,8 @@
               Bases: <code><span title="pillar.logging.LoggingMixin">LoggingMixin</span></code></p>
 
 
-      <p>Base class for workers</p>
+      <p>Base class for workers.</p>
+<p><em>New in 9.0</em>.</p>
 
 
 
@@ -2140,7 +2150,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>

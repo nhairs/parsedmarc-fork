@@ -18,11 +18,11 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>file - ParseDMARC</title>
+        <title>file - ParseDMARC Fork</title>
       
     
     
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="ParseDMARC" class="md-header__button md-logo" aria-label="ParseDMARC" data-md-component="logo">
+    <a href="../../../.." title="ParseDMARC Fork" class="md-header__button md-logo" aria-label="ParseDMARC Fork" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
@@ -110,7 +110,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ParseDMARC
+            ParseDMARC Fork
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -229,13 +229,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="ParseDMARC" class="md-nav__button md-logo" aria-label="ParseDMARC" data-md-component="logo">
+    <a href="../../../.." title="ParseDMARC Fork" class="md-nav__button md-logo" aria-label="ParseDMARC Fork" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
 
     </a>
-    ParseDMARC
+    ParseDMARC Fork
   </label>
   
     <div class="md-nav__source">
@@ -1507,6 +1507,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parsedmarc.source.file.DirectoriesAndFilesConfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;DirectoriesAndFilesConfig
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1727,6 +1736,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#parsedmarc.source.file.DirectoriesAndFilesConfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;DirectoriesAndFilesConfig
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1797,6 +1815,7 @@ the <code>DirectoryWatcher</code> source.</p>
 <li>Mailbox: <code>.mbox</code></li>
 <li>Email: <code>.eml</code>, <code>.msg</code></li>
 </ul>
+<p><em>New in 9.0</em>.</p>
 
 
 
@@ -1933,7 +1952,7 @@ idenfity this instance and any log messages it produces</p>
 
 
 <a href="#parsedmarc.source.file.DirectoriesAndFiles.ack_job" class="headerlink" title="Permanent link">🔗</a></h3>
-<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">ack_job</span><span class="p">(</span><span class="n">job</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.source.base.Job" href="../base/#parsedmarc.source.base.Job">Job</a></span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="n"><span title="parsedmarc.source.base.JobStatus">JobStatus</span></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">ack_job</span><span class="p">(</span><span class="n">job</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.source.base.Job" href="../base/#parsedmarc.source.base.Job">Job</a></span><span class="p">,</span> <span class="n">status</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.source.base.JobStatus" href="../base/#parsedmarc.source.base.JobStatus">JobStatus</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
 
     <div class="doc doc-contents ">
@@ -1974,7 +1993,7 @@ idenfity this instance and any log messages it produces</p>
               <p>
                   <span class="doc-param-annotation">
                     <b>TYPE:</b>
-                      <code><span title="parsedmarc.source.base.JobStatus">JobStatus</span></code>
+                      <code><a class="autorefs autorefs-internal" title="parsedmarc.source.base.JobStatus" href="../base/#parsedmarc.source.base.JobStatus">JobStatus</a></code>
                   </span>
               </p>
             </td>
@@ -2151,6 +2170,46 @@ It is still recomended to call <code>super().validate_config()</code>.</p>
 
 </div>
 
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="parsedmarc.source.file.DirectoriesAndFilesConfig" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">DirectoriesAndFilesConfig</span>
+
+
+<a href="#parsedmarc.source.file.DirectoriesAndFilesConfig" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.source.base.BaseConfig" href="../base/#parsedmarc.source.base.BaseConfig">BaseConfig</a></code></p>
+
+
+      <p>Directories and Files Config</p>
+<p><em>New in 9.0</em>.</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
 
 
 
@@ -2233,7 +2292,7 @@ It is still recomended to call <code>super().validate_config()</code>.</p>
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>
