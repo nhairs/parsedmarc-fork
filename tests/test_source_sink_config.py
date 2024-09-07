@@ -88,7 +88,7 @@ PARSER = ReportParser()
     ],
 )
 def test_source_init(class_: Type[Source], config: Dict[str, Any]):
-    source = class_("test", PARSER, config)
+    class_("test", PARSER, config)
     return
 
 
@@ -103,5 +103,5 @@ def test_source_init(class_: Type[Source], config: Dict[str, Any]):
     ],
 )
 def test_sink_init(class_: Type[Sink], config: Dict[str, Any]):
-    sink = class_("test", config)
+    class_("test", config)
     return
