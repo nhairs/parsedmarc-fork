@@ -101,6 +101,9 @@ New sources and sinks are welcome, how popular / common a service is will be tak
 
 When adding a new source or sink you will need to pay attention to the following:
 
+- Ensure that all type annotations on `Source`, `Sink`, and their config classes are Python 3.8 compatible as these are inspected during runtime.
+  - For example this means using `List[str]` instead of `list[str]` and `Union[str, int, None]` instead of `str | int | None`.
+  - For all other annotations using the latest styles is okay.
 - Ensure that the class and the config class have appropriate docstrings.
 - Update / create the relevant source / sink documention.
 - Update `tests/test_source_sink_config` to ensure basic intialisation.
