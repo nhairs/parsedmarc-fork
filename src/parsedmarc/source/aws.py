@@ -6,7 +6,7 @@ from __future__ import annotations
 # Standard Library
 from collections import deque
 from io import BytesIO
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Dict
 
 # Installed
 import boto3
@@ -170,5 +170,5 @@ class SimpleEmailServiceConfig(BaseConfig):
     *New in 9.0*.
     """
 
-    session: dict[str, Any] = Field(default_factory=dict)
+    session: Dict[str, Any] = Field(default_factory=dict)
     queue_name: str

@@ -6,7 +6,7 @@ from __future__ import annotations
 # Standard Library
 from collections import deque
 import time
-from typing import Literal
+from typing import List, Literal, Union
 
 # Local
 from .. import mail
@@ -154,7 +154,7 @@ class ImapConfig(MailboxConfig):
     host: str  # IMAP host to connect to
     username: str  # IMAP Username
     password: str  # IMAP Password
-    port: int | None = (
+    port: Union[int, None] = (
         None  # Port to connect to, if `None` will use the default IMAP port based on the SSL/TLS settings
     )
     ssl: bool = True  # Use SSL/TLS
@@ -202,7 +202,7 @@ class GoogleConfig(MailboxConfig):
 
     credentials_file: str  # Path to file containing the credentials
     token_file: str = ".google_token"  # Path to save the token file
-    scopes: list[str] = [
+    scopes: List[str] = [
         "https://www.googleapis.com/auth/gmail.modify"
     ]  # Scopes to use when acquiring credentials
     include_spam_trash: bool = (
@@ -266,9 +266,9 @@ class MicrosoftGraphConfig(MailboxConfig):
     auth_method: Literal["UsernamePassword", "DeviceCode", "ClientSecret"] = "UsernamePassword"
     client_id: str
     client_secret: str
-    username: str | None = None
-    password: str | None = None
-    tenant_id: str | None = None
-    mailbox: str | None = None
+    username: Union[str, None] = None
+    password: Union[str, None] = None
+    tenant_id: Union[str, None] = None
+    mailbox: Union[str, None] = None
     token_file: str = ".microsoft_graph_token"
     allow_unencrypted_storage: bool = False

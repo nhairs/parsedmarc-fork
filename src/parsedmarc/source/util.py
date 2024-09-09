@@ -12,7 +12,7 @@ from __future__ import annotations
 from copy import deepcopy
 import random
 import time
-from typing import Any
+from typing import Any, Dict, Union
 import uuid
 
 # Local
@@ -64,9 +64,9 @@ class UtilityConfig(BaseConfig):
     """
 
     sleep_enabled: bool = True
-    sleep_time: int | None = None
-    sleep_min: int | float = 0.2
-    sleep_max: int | float = 1.5
+    sleep_time: Union[int, None] = None
+    sleep_min: Union[int, float] = 0.2
+    sleep_max: Union[int, float] = 1.5
 
 
 class ReportConfig(UtilityConfig):
@@ -75,7 +75,7 @@ class ReportConfig(UtilityConfig):
     *New in 9.0*.
     """
 
-    report: dict[str, Any] | None = None
+    report: Union[Dict[str, Any], None] = None
 
 
 ## DMARC Reports

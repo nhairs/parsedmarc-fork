@@ -6,7 +6,7 @@ from __future__ import annotations
 # Standard Library
 from collections import deque
 import pathlib
-from typing import Literal
+from typing import Dict, List, Literal
 
 # Local
 from ..const import AppState
@@ -34,7 +34,7 @@ class DirectoriesAndFiles(Source):
 
     config: DirectoriesAndFilesConfig
 
-    _EXT: dict[str, Literal["email", "mbox"]] = {
+    _EXT: Dict[str, Literal["email", "mbox"]] = {
         ".eml": "email",
         ".msg": "email",
         ".mbox": "mbox",
@@ -122,7 +122,7 @@ class DirectoriesAndFilesConfig(BaseConfig):
     *New in 9.0*.
     """
 
-    paths: list[str]
+    paths: List[str]
 
 
 ## Watching

@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 # Standard Library
-from typing import Any, Literal
+from typing import Any, Dict, Literal
 
 # Local
 from ..const import AppState
@@ -69,5 +69,5 @@ class ElasticsearchConfig(BaseConfig):
     """Elasticsearch Config"""
 
     # As per https://elasticsearch-py.readthedocs.io/en/v8.13.0/api/elasticsearch.html
-    client: dict[str, Any]
+    client: Dict[str, Any]
     on_duplicate: Literal["discard"] = "discard"  # TODO: implement update logic and add
