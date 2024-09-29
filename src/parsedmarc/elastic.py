@@ -184,7 +184,7 @@ class AlreadySaved(ValueError):
 
 class ElasticsearchClient:
 
-    def __init__(
+    def __init__(  # pylint: disable=too-many-positional-arguments
         self,
         hosts: str | list[str],
         use_ssl: bool = False,
