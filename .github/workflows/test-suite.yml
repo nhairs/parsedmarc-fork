@@ -42,9 +42,10 @@ jobs:
       fail-fast: false  # allow tests to run on all platforms
       matrix:
         python-version:
-          - "pypy-3.8"
-          - "pypy-3.9"
-          - "pypy-3.10"
+          # Disable PYPY for now due to incompatible dependencies (orjson)
+          # - "pypy-3.8"
+          # - "pypy-3.9"
+          # - "pypy-3.10"
           - "3.8"
           - "3.9"
           - "3.10"
@@ -55,6 +56,11 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-latest
+
+        exclude:
+          # failing due to 4th level dependency
+          - python-version: "3.13-dev"
+            os: windows-latest
 
     steps:
       - uses: actions/checkout@v4
