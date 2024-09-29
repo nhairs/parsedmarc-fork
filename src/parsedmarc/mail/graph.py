@@ -108,7 +108,7 @@ def _generate_credential(auth_method: str, token_path: Path, **kwargs) -> Creden
 class MSGraphConnection(MailboxConnection):
     """MailboxConnection to a Microsoft account via the Micorsoft Graph API"""
 
-    def __init__(
+    def __init__(  # pylint: disable=too-many-positional-arguments
         self,
         auth_method: str,
         client_id: str,

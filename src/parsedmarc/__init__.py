@@ -347,7 +347,7 @@ def get_dmarc_reports_from_mbox(
     return reports
 
 
-def get_dmarc_reports_from_mailbox(
+def get_dmarc_reports_from_mailbox(  # pylint: disable=too-many-positional-arguments
     connection: MailboxConnection,
     reports_folder: str = "INBOX",
     archive_folder: str = "Archive",
@@ -510,7 +510,7 @@ def get_dmarc_reports_from_mailbox(
     return results
 
 
-def watch_inbox(
+def watch_inbox(  # pylint: disable=too-many-positional-arguments
     mailbox_connection: MailboxConnection,
     callback: Callable,
     reports_folder: str = "INBOX",
@@ -693,7 +693,7 @@ def get_report_zip(results: SortedReportContainer) -> bytes:
     return data
 
 
-def email_results(
+def email_results(  # pylint: disable=too-many-positional-arguments
     results: SortedReportContainer,
     host: str,
     mail_from: str,

@@ -17,7 +17,7 @@ from parsedmarc.mail.mailbox_connection import MailboxConnection
 class IMAPConnection(MailboxConnection):
     """MailboxConnection for connecting to a mailbox via IMAP."""
 
-    def __init__(
+    def __init__(  # pylint: disable=too-many-positional-arguments
         self,
         host: str | None = None,
         user: str | None = None,
