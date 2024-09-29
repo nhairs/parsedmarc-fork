@@ -125,6 +125,7 @@ GeoLite*
 tmp/
 
 # Config files
+config/
 prod*.ini
 stage*.ini
 dev*.ini

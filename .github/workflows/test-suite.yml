@@ -1,0 +1,117 @@
+name: Test ParseDMARC
+
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: "Python Lint"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ParseDMARC
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e '.[dev,docs]'
+
+      - name: Check code style
+        run: |
+          black src tests --check --diff
+          isort src tests --check --diff
+          pylint src tests
+          mypy src tests
+
+  test:
+    name: "Python Test ${{matrix.python-version}} ${{ matrix.os }}"
+    needs: [lint]
+    runs-on: "${{ matrix.os }}"
+    strategy:
+      fail-fast: false  # allow tests to run on all platforms
+      matrix:
+        python-version:
+          - "pypy-3.8"
+          - "pypy-3.9"
+          - "pypy-3.10"
+          - "3.8"
+          - "3.9"
+          - "3.10"
+          - "3.11"
+          - "3.12"
+          - "3.13-dev"
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e '.[dev,docs]'
+
+      - name: Run unit tests
+        run: |
+          pytest
+
+  legacy-tests:
+
+    name: Test Legacy CLI
+    needs: [lint, test]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libemail-outlook-message-perl
+          wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+          sudo apt-get install apt-transport-https
+          echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+          sudo apt-get update && sudo apt-get install elasticsearch
+          sudo systemctl restart elasticsearch
+          sudo systemctl --no-pager status elasticsearch
+          # Note: We set a static password as ES8 requires that a password is set.
+          # We can't use a randomly generated one in our CI script so we set one here
+          # For real world applications you should NOT commit passwords to git like this.
+          # Note Syntax: https://github.com/orgs/community/discussions/25469#discussioncomment-3248006
+          sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password --interactive -u elastic <<'EOF'
+          y
+          WFXvAZ6xvcAhx
+          WFXvAZ6xvcAhx
+          EOF
+
+      - name: Install ParseDMARC
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Test sample DMARC reports
+        continue-on-error: true
+        run: |
+          parsedmarc --debug -c ci.ini samples/aggregate/*
+          parsedmarc --debug -c ci.ini samples/forensic/*
