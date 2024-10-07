@@ -8,12 +8,6 @@ import json
 import logging
 import logging.handlers
 
-# Package
-from parsedmarc import (
-    parsed_aggregate_reports_to_csv_rows,
-    parsed_forensic_reports_to_csv_rows,
-)
-
 # Local
 from ..const import AppState
 from ..report import AggregateReport, ForensicReport
@@ -53,13 +47,12 @@ class Syslog(Sink):
         return
 
     def process_aggregate_report(self, report: AggregateReport) -> None:
-        for row in parsed_aggregate_reports_to_csv_rows(report):
+        for row in report.to_csv_rows():
             self.syslog.info(json.dumps(row))
         return
 
     def process_forensic_report(self, report: ForensicReport) -> None:
-        for row in parsed_forensic_reports_to_csv_rows(report):
-            self.syslog.info(json.dumps(row))
+        self.syslog.info(json.dumps(report.to_csv_row()))
         return
 
 
