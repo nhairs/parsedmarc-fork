@@ -141,7 +141,7 @@ def query_dns(
     if record_type == "TXT":
         resource_records = list(
             map(
-                lambda r: r.strings,
+                lambda r: r.strings,  # type: ignore
                 resolver.resolve(domain, record_type, lifetime=timeout),
             )
         )
