@@ -54,12 +54,12 @@ class Syslog(Sink):
 
     def process_aggregate_report(self, report: AggregateReport) -> None:
         for row in parsed_aggregate_reports_to_csv_rows(report):
-            self.logger.info(json.dumps(row))
+            self.syslog.info(json.dumps(row))
         return
 
     def process_forensic_report(self, report: ForensicReport) -> None:
         for row in parsed_forensic_reports_to_csv_rows(report):
-            self.logger.info(json.dumps(row))
+            self.syslog.info(json.dumps(row))
         return
 
 
