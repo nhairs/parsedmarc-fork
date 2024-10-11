@@ -112,8 +112,6 @@ This section documents each item in the `parsedmarc` config and how to move it t
 
 All heading are config options are defined using their original `parsedmarc` name as they were in version `8.15.0`.
 
-!!! warning "TODO"
-    list all config items within each section, don't just say "use this".
 
 ### `general`
 
@@ -125,9 +123,9 @@ All heading are config options are defined using their original `parsedmarc` nam
 `strip_attachment_payloads`: moved to `parser.strip_attachment_payloads`
 
 `output`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
-`aggregate_json_filename`: not supported - see `output` above.
+`aggregate_json_filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
 
-`forensic_json_filename`: not supported - see `output` above.
+`forensic_json_filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
 
 `ip_db_path`: moved to `parser.ip_db_path`
 

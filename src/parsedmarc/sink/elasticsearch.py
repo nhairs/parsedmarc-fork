@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 # Standard Library
-from typing import List, Literal
+from typing import List, Literal, Union
 
 # Installed
 from pydantic import BaseModel
@@ -76,14 +76,14 @@ class ElasticsearchConfig(BaseConfig):
 
 
 class ElasticsearchClientConfig(BaseModel):
-    hosts: str | List[str]
+    hosts: Union[str, List[str]]
     use_ssl: bool = False
-    ssl_cert_path: str | None = None
-    username: str | None = None
-    password: str | None = None
-    api_key: str | None = None
+    ssl_cert_path: Union[str, None] = None
+    username: Union[str, None] = None
+    password: Union[str, None] = None
+    api_key: Union[str, None] = None
     timeout: float = 60.0
-    index_suffix: str | None = None
+    index_suffix: Union[str, None] = None
     monthly_index: bool = True
     number_of_shards: int = 1
     number_of_replicas: int = 0
