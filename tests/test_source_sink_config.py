@@ -96,7 +96,7 @@ def test_source_init(class_: Type[Source], config: Dict[str, Any]):
     "class_, config",
     [
         # ElasticSearch
-        (parsedmarc.sink.elasticsearch.Elasticsearch, {"client": {"foo": "bar"}}),
+        (parsedmarc.sink.elasticsearch.Elasticsearch, {"client": {"hosts": "foo"}}),
         # Util
         (parsedmarc.sink.util.Noop, {}),
         (parsedmarc.sink.util.Console, {}),

@@ -4,7 +4,10 @@
 from __future__ import annotations
 
 # Standard Library
-from typing import Any, Dict, Literal
+from typing import List, Literal
+
+# Installed
+from pydantic import BaseModel
 
 # Local
 from ..const import AppState
@@ -29,7 +32,7 @@ class Elasticsearch(Sink):
         self._state = AppState.SETTING_UP
 
         try:
-            self.client = ElasticsearchClient(**self.config.client)
+            self.client = ElasticsearchClient(**dict(self.config.client))
             self.client.migrate_indexes()
 
         except:
@@ -68,6 +71,19 @@ class Elasticsearch(Sink):
 class ElasticsearchConfig(BaseConfig):
     """Elasticsearch Config"""
 
-    # As per https://elasticsearch-py.readthedocs.io/en/v8.13.0/api/elasticsearch.html
-    client: Dict[str, Any]
+    client: ElasticsearchClientConfig
     on_duplicate: Literal["discard"] = "discard"  # TODO: implement update logic and add
+
+
+class ElasticsearchClientConfig(BaseModel):
+    hosts: str | List[str]
+    use_ssl: bool = False
+    ssl_cert_path: str | None = None
+    username: str | None = None
+    password: str | None = None
+    api_key: str | None = None
+    timeout: float = 60.0
+    index_suffix: str | None = None
+    monthly_index: bool = True
+    number_of_shards: int = 1
+    number_of_replicas: int = 0
