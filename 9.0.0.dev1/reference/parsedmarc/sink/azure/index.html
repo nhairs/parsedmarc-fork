@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://nhairs.github.io/parsedmarc-fork/latest/davmail/">
+        <link rel="canonical" href="https://nhairs.github.io/parsedmarc-fork/latest/reference/parsedmarc/sink/azure/">
       
       
-        <link rel="prev" href="../splunk/">
+        <link rel="prev" href="../aws/">
       
       
-        <link rel="next" href="../migrating/">
+        <link rel="next" href="../base/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
-        <title>Accessing an inbox using OWA/EWS - ParseDMARC Fork</title>
+        <title>azure - ParseDMARC Fork</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3cba04c6.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#accessing-an-inbox-using-owaews" class="md-skip">
+        <a href="#parsedmarc.sink.azure" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="ParseDMARC Fork" class="md-header__button md-logo" aria-label="ParseDMARC Fork" data-md-component="logo">
+    <a href="../../../.." title="ParseDMARC Fork" class="md-header__button md-logo" aria-label="ParseDMARC Fork" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Accessing an inbox using OWA/EWS
+              <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> azure
             
           </span>
         </div>
@@ -229,7 +229,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="ParseDMARC Fork" class="md-nav__button md-logo" aria-label="ParseDMARC Fork" data-md-component="logo">
+    <a href="../../../.." title="ParseDMARC Fork" class="md-nav__button md-logo" aria-label="ParseDMARC Fork" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/></svg>
@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -279,7 +279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
+      <a href="../../../../installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,7 +299,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/" class="md-nav__link">
+      <a href="../../../../usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -319,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../output/" class="md-nav__link">
+      <a href="../../../../output/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -339,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../elasticsearch/" class="md-nav__link">
+      <a href="../../../../elasticsearch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,7 +359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kibana/" class="md-nav__link">
+      <a href="../../../../kibana/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -379,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../splunk/" class="md-nav__link">
+      <a href="../../../../splunk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -396,30 +396,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Accessing an inbox using OWA/EWS
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../davmail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -428,44 +408,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#running-davmail-as-a-systemd-service" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running DavMail as a systemd service
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuring-parsedmarc-for-davmail" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuring parsedmarc for DavMail
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -477,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../migrating/" class="md-nav__link">
+      <a href="../../../../migrating/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -497,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/" class="md-nav__link">
+      <a href="../../../../contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -565,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dmarc/" class="md-nav__link">
+      <a href="../../../../dmarc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -586,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mailing-lists/" class="md-nav__link">
+      <a href="../../../../mailing-lists/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -611,8 +553,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -626,13 +570,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
@@ -646,7 +588,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             API Reference
@@ -657,6 +599,8 @@
                 
   
   
+    
+  
   
   
     
@@ -705,18 +649,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_1" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../reference/parsedmarc/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -733,7 +675,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_1">
             <span class="md-nav__icon md-icon"></span>
             <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> parsedmarc
@@ -749,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/application/" class="md-nav__link">
+      <a href="../../application/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -770,7 +712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/cli/" class="md-nav__link">
+      <a href="../../cli/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -791,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/const/" class="md-nav__link">
+      <a href="../../const/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -812,7 +754,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/elastic/" class="md-nav__link">
+      <a href="../../elastic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -833,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/kafkaclient/" class="md-nav__link">
+      <a href="../../kafkaclient/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/log/" class="md-nav__link">
+      <a href="../../log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/loganalytics/" class="md-nav__link">
+      <a href="../../loganalytics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -926,7 +868,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../reference/parsedmarc/mail/" class="md-nav__link ">
+            <a href="../../mail/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -959,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/mail/gmail/" class="md-nav__link">
+      <a href="../../mail/gmail/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/mail/graph/" class="md-nav__link">
+      <a href="../../mail/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/mail/imap/" class="md-nav__link">
+      <a href="../../mail/imap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/mail/mailbox_connection/" class="md-nav__link">
+      <a href="../../mail/mailbox_connection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1051,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/parser/" class="md-nav__link">
+      <a href="../../parser/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1072,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/report/" class="md-nav__link">
+      <a href="../../report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1061,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../reference/parsedmarc/resources/" class="md-nav__link ">
+            <a href="../../resources/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1152,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/resources/dbip/" class="md-nav__link">
+      <a href="../../resources/dbip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/s3/" class="md-nav__link">
+      <a href="../../s3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1199,6 +1141,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1229,18 +1173,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_1_14" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../reference/parsedmarc/sink/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1257,7 +1199,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_1_14_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_1_14_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_12_1_14">
             <span class="md-nav__icon md-icon"></span>
             <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> sink
@@ -1273,7 +1215,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/sink/aws/" class="md-nav__link">
+      <a href="../aws/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1291,10 +1233,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../reference/parsedmarc/sink/azure/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> azure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1303,6 +1265,95 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;LogAnalytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" LogAnalytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.state" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;state
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;cleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.process_report" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;process_report
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;shutdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.validate_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;validate_config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalyticsConfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;LogAnalyticsConfig
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1315,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/sink/base/" class="md-nav__link">
+      <a href="../base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1336,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/sink/elasticsearch/" class="md-nav__link">
+      <a href="../elasticsearch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1357,7 +1408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/sink/kafka/" class="md-nav__link">
+      <a href="../kafka/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/sink/syslog/" class="md-nav__link">
+      <a href="../syslog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1399,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/sink/util/" class="md-nav__link">
+      <a href="../util/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1420,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/sink/webhook/" class="md-nav__link">
+      <a href="../webhook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1481,7 +1532,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../reference/parsedmarc/source/" class="md-nav__link ">
+            <a href="../../source/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1514,7 +1565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/source/aws/" class="md-nav__link">
+      <a href="../../source/aws/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1535,7 +1586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/source/base/" class="md-nav__link">
+      <a href="../../source/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1556,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/source/email/" class="md-nav__link">
+      <a href="../../source/email/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1577,7 +1628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/source/file/" class="md-nav__link">
+      <a href="../../source/file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1598,7 +1649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/source/util/" class="md-nav__link">
+      <a href="../../source/util/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1627,7 +1678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/splunk/" class="md-nav__link">
+      <a href="../../splunk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1648,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/syslog/" class="md-nav__link">
+      <a href="../../syslog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1669,7 +1720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reference/parsedmarc/utils/" class="md-nav__link">
+      <a href="../../utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1725,18 +1776,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-davmail-as-a-systemd-service" class="md-nav__link">
+  <a href="#parsedmarc.sink.azure.LogAnalytics" class="md-nav__link">
     <span class="md-ellipsis">
-      Running DavMail as a systemd service
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;LogAnalytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label=" LogAnalytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.state" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-attribute"></code>&nbsp;state
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.cleanup" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;cleanup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.process_report" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;process_report
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;shutdown
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parsedmarc.sink.azure.LogAnalytics.validate_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      <code class="doc-symbol doc-symbol-toc doc-symbol-method"></code>&nbsp;validate_config
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#configuring-parsedmarc-for-davmail" class="md-nav__link">
+  <a href="#parsedmarc.sink.azure.LogAnalyticsConfig" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring parsedmarc for DavMail
+      <code class="doc-symbol doc-symbol-toc doc-symbol-class"></code>&nbsp;LogAnalyticsConfig
     </span>
   </a>
   
@@ -1760,155 +1862,339 @@
   
 
 
-<h1 id="accessing-an-inbox-using-owaews">Accessing an inbox using OWA/EWS<a class="headerlink" href="#accessing-an-inbox-using-owaews" title="Permanent link">🔗</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Starting in 8.0.0, parsedmarc supports accessing Microsoft/Office 365
-inboxes via the Microsoft Graph API, which is preferred over Davmail.</p>
+<div class="doc doc-object doc-module">
+
+
+
+<h1 id="parsedmarc.sink.azure" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-module"></code>            <span class="doc doc-object-name doc-module-name">parsedmarc.sink.azure</span>
+
+
+<a href="#parsedmarc.sink.azure" class="headerlink" title="Permanent link">🔗</a></h1>
+
+    <div class="doc doc-contents first">
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="parsedmarc.sink.azure.LogAnalytics" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">LogAnalytics</span>
+
+
+<a href="#parsedmarc.sink.azure.LogAnalytics" class="headerlink" title="Permanent link">🔗</a></h2>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">LogAnalytics</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">name</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span> <span class="o">=</span> <span class="s2">&quot;default&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">config</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></span><span class="p">,</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a></span><span class="p">]</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">)</span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.sink.base.Sink" href="../base/#parsedmarc.sink.base.Sink">Sink</a></code></p>
+
+
+      <p>Stores reports in Azure Log Analytics.</p>
+
+
+<details class="references" open>
+  <summary>References</summary>
+  <ul>
+<li>https://learn.microsoft.com/en-us/azure/azure-monitor/logs/logs-ingestion-api-overview</li>
+</ul>
+</details>      <p><em>New in 9.0</em>.</p>
+
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>name</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>profile name for this instance, ideally should be unqiue to easily
+idenfity this instance and any log messages it produces</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>&#39;default&#39;</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>config</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>config for this instance</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#dict">dict</a>[<a class="autorefs autorefs-external" href="https://docs.python.org/3/library/stdtypes.html#str">str</a>, <a class="autorefs autorefs-external" title="typing.Any" href="https://docs.python.org/3/library/typing.html#typing.Any">Any</a>] | None</code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>None</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h3 id="parsedmarc.sink.azure.LogAnalytics.state" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-attribute"></code>            <span class="doc doc-object-name doc-attribute-name">state</span>
+
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-property"><code>property</code></small>
+  </span>
+
+<a href="#parsedmarc.sink.azure.LogAnalytics.state" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">state</span><span class="p">:</span> <span class="n"><span title="parsedmarc.const.AppState">AppState</span></span>
+</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Read only Sink state</p>
+    </div>
+
 </div>
-<p>Some organizations do not allow IMAP or the Microsoft Graph API,
-and only support Exchange Web Services (EWS)/Outlook Web Access (OWA).
-In that case, Davmail will need to be set up
-as a local EWS/OWA IMAP gateway. It can even work where
-<a href="https://davmail.sourceforge.net/faq.html">Modern Auth/multi-factor authentication</a> is required.</p>
-<p>To do this, download the latest <code>davmail-version.zip</code> from
-<a href="https://sourceforge.net/projects/davmail/files/">https://sourceforge.net/projects/davmail/files/</a></p>
-<p>Extract the zip using the <code>unzip</code> command.</p>
-<p>Install Java:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>default-jre-headless
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="parsedmarc.sink.azure.LogAnalytics.cleanup" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">cleanup</span>
+
+
+<a href="#parsedmarc.sink.azure.LogAnalytics.cleanup" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">cleanup</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<p>Configure Davmail by creating a <code>davmail.properties</code> file</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># DavMail settings, see http://davmail.sourceforge.net/ for documentation</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">#############################################################</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Basic settings</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Server or workstation mode</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="na">davmail.server</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># connection mode auto, EWS or WebDav</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="na">davmail.enableEws</span><span class="o">=</span><span class="s">auto</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># base Exchange OWA or EWS url</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="na">davmail.url</span><span class="o">=</span><span class="s">https://outlook.office365.com/EWS/Exchange.asmx</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># Listener ports</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="na">davmail.imapPort</span><span class="o">=</span><span class="s">1143</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1">#############################################################</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1"># Network settings</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="c1"># Network proxy settings</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="na">davmail.enableProxy</span><span class="o">=</span><span class="s">false</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="na">davmail.useSystemProxies</span><span class="o">=</span><span class="s">false</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="na">davmail.proxyHost</span><span class="o">=</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="na">davmail.proxyPort</span><span class="o">=</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="na">davmail.proxyUser</span><span class="o">=</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="na">davmail.proxyPassword</span><span class="o">=</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="c1"># proxy exclude list</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="na">davmail.noProxyFor</span><span class="o">=</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="c1"># block remote connection to DavMail</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="na">davmail.allowRemote</span><span class="o">=</span><span class="s">false</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="c1"># bind server sockets to the loopback address</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="na">davmail.bindAddress</span><span class="o">=</span><span class="s">127.0.0.1</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="c1"># disable SSL for specified listeners</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="na">davmail.ssl.nosecureimap</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="c1"># Send keepalive character during large folder and messages download</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="na">davmail.enableKeepalive</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="c1"># Message count limit on folder retrieval</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="na">davmail.folderSizeLimit</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="c1">#############################################################</span>
-<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="c1"># IMAP settings</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>
-<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="c1"># Delete messages immediately on IMAP STORE \Deleted flag</span>
-<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="na">davmail.imapAutoExpunge</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>
-<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="c1"># Enable IDLE support, set polling delay in minutes</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="na">davmail.imapIdleDelay</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>
-<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="c1"># Always reply to IMAP RFC822.SIZE requests with Exchange approximate</span>
-<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="c1"># message size for performance reasons</span>
-<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="na">davmail.imapAlwaysApproxMsgSize</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
-<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="c1"># Client connection timeout in seconds - default 300, 0 to disable</span>
-<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="na">davmail.clientSoTimeout</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>
-<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="c1">#############################################################</span>
-</code></pre></div>
-<h2 id="running-davmail-as-a-systemd-service">Running DavMail as a systemd service<a class="headerlink" href="#running-davmail-as-a-systemd-service" title="Permanent link">🔗</a></h2>
-<p>Use systemd to run <code>davmail</code> as a service.</p>
-<p>Create a system user</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>davmail<span class="w"> </span>-r<span class="w"> </span>-s<span class="w"> </span>/bin/false
-</code></pre></div>
-<p>Protect the <code>davmail</code> configuration file from prying eyes</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>root:davmail<span class="w"> </span>/opt/davmail/davmail.properties
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="nv">u</span><span class="o">=</span>rw,g<span class="o">=</span>r,o<span class="o">=</span><span class="w"> </span>/opt/davmail/davmail.properties
-</code></pre></div>
-<p>Create the service configuration file</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/davmail.service
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">[Unit]</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">DavMail gateway service</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="na">Documentation</span><span class="o">=</span><span class="s">https://sourceforge.net/projects/davmail/</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="na">After</span><span class="o">=</span><span class="s">syslog.target network.target</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">[Service]</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/davmail/davmail /opt/davmail/davmail.properties</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="na">User</span><span class="o">=</span><span class="s">davmail</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="na">Group</span><span class="o">=</span><span class="s">davmail</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="na">RestartSec</span><span class="o">=</span><span class="s">5m</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="k">[Install]</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
-</code></pre></div>
-<p>Then, enable the service</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>parsedmarc.service
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>sudo<span class="w"> </span>service<span class="w"> </span>davmail<span class="w"> </span>restart
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You must also run the above commands whenever you edit
-<code>davmail.service</code>.</p>
+
+    <div class="doc doc-contents ">
+
+      <p>Perform cleanup on this source.</p>
+<p>This method is called as a part of <code>self.shutdown</code>.</p>
+<p>Child classes can override this method to implement their own logic.
+It is still recomended to call <code>super().cleanup()</code>.</p>
+
+    </div>
+
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Always restart the service every time you upgrade to a new version of
-<code>davmail</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>service<span class="w"> </span>davmail<span class="w"> </span>restart
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="parsedmarc.sink.azure.LogAnalytics.process_report" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">process_report</span>
+
+
+<a href="#parsedmarc.sink.azure.LogAnalytics.process_report" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">process_report</span><span class="p">(</span><span class="n">report</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-internal" title="parsedmarc.report.Report" href="../../report/#parsedmarc.report.Report">Report</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Default method for processing reports.</p>
+<p>Rather than directly processing reports, checks for methods matching a given report
+type and if it exists passes teh report to it. If no method exists for the given report
+does nothing.</p>
+<p>Supported methods:</p>
+<ul>
+<li><code>process_aggregate_report</code></li>
+<li><code>process_forensic_report</code></li>
+</ul>
+
+    </div>
+
 </div>
-<p>To check the status of the service, run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>service<span class="w"> </span>davmail<span class="w"> </span>status
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="parsedmarc.sink.azure.LogAnalytics.shutdown" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">shutdown</span>
+
+
+<a href="#parsedmarc.sink.azure.LogAnalytics.shutdown" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">shutdown</span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">timeout</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a></span> <span class="o">|</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></span> <span class="o">=</span> <span class="mi">120</span><span class="p">,</span> <span class="n">force</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></span> <span class="o">=</span> <span class="kc">False</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the event of a crash, systemd will restart the service after 5
-minutes, but the <code>service davmail status</code> command will only show the
-logs for the current process. To vew the logs for previous runs as
-well as the current process (newest to oldest), run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>davmail.service<span class="w"> </span>-r
-</code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Attempt to gracefully shutdown this source.</p>
+
+
+<table>
+      <thead>
+        <tr>
+          <th><span class="doc-section-title">PARAMETER</span></th>
+          <th><span>DESCRIPTION</span></th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>timeout</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>Giveup after this many seonds (TODO)</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#int">int</a> | <a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#float">float</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>120</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>force</code></td>
+            <td class="doc-param-details">
+              <div class="doc-md-description">
+                <p>If a timeout would occur, instead force shutdown.</p>
+              </div>
+              <p>
+                  <span class="doc-param-annotation">
+                    <b>TYPE:</b>
+                      <code><a class="autorefs autorefs-external" href="https://docs.python.org/3/library/functions.html#bool">bool</a></code>
+                  </span>
+                  <span class="doc-param-default">
+                    <b>DEFAULT:</b>
+                      <code>False</code>
+                  </span>
+              </p>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+    </div>
+
 </div>
-<h2 id="configuring-parsedmarc-for-davmail">Configuring parsedmarc for DavMail<a class="headerlink" href="#configuring-parsedmarc-for-davmail" title="Permanent link">🔗</a></h2>
-<p>Because you are interacting with DavMail server over the loopback
-(i.e. <code>127.0.0.1</code>), add the following options to <code>parsedmarc.ini</code>
-config file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">[imap]</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="na">host</span><span class="o">=</span><span class="s">127.0.0.1</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="na">port</span><span class="o">=</span><span class="s">1143</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="na">ssl</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="na">watch</span><span class="o">=</span><span class="s">True</span>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="parsedmarc.sink.azure.LogAnalytics.validate_config" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-method"></code>            <span class="doc doc-object-name doc-function-name">validate_config</span>
+
+
+<a href="#parsedmarc.sink.azure.LogAnalytics.validate_config" class="headerlink" title="Permanent link">🔗</a></h3>
+<div class="doc-signature highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">validate_config</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kc">None</span>
 </code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Validate the config of this instance</p>
+<p>Child classes can override this method to implement their own logic.
+It is still recomended to call <code>super().validate_config()</code>.</p>
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h2 id="parsedmarc.sink.azure.LogAnalyticsConfig" class="doc doc-heading">
+<code class="doc-symbol doc-symbol-heading doc-symbol-class"></code>            <span class="doc doc-object-name doc-class-name">LogAnalyticsConfig</span>
+
+
+<a href="#parsedmarc.sink.azure.LogAnalyticsConfig" class="headerlink" title="Permanent link">🔗</a></h2>
+
+
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><a class="autorefs autorefs-internal" title="parsedmarc.sink.base.BaseConfig" href="../base/#parsedmarc.sink.base.BaseConfig">BaseConfig</a></code></p>
+
+
+      <p>LogAnalytics Config</p>
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
 
 
 
@@ -1980,10 +2266,10 @@ config file:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>

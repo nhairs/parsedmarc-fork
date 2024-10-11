@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nhairs.github.io/parsedmarc-fork/latest/davmail/">
+        <link rel="canonical" href="https://nhairs.github.io/parsedmarc-fork/latest/migrating/">
       
       
-        <link rel="prev" href="../splunk/">
+        <link rel="prev" href="../davmail/">
       
       
-        <link rel="next" href="../migrating/">
+        <link rel="next" href="../contributing/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Accessing an inbox using OWA/EWS - ParseDMARC Fork</title>
+        <title>Migrating to parsedmarcd - ParseDMARC Fork</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#accessing-an-inbox-using-owaews" class="md-skip">
+        <a href="#migrating-to-parsedmarcd" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Accessing an inbox using OWA/EWS
+              Migrating to parsedmarcd
             
           </span>
         </div>
@@ -396,6 +396,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../davmail/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accessing an inbox using OWA/EWS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -412,7 +432,7 @@
           
   
   <span class="md-ellipsis">
-    Accessing an inbox using OWA/EWS
+    Migrating to parsedmarcd
   </span>
   
 
@@ -423,7 +443,7 @@
         
   
   <span class="md-ellipsis">
-    Accessing an inbox using OWA/EWS
+    Migrating to parsedmarcd
   </span>
   
 
@@ -445,20 +465,194 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-davmail-as-a-systemd-service" class="md-nav__link">
+  <a href="#application-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Running DavMail as a systemd service
+      Application Architecture
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-parsedmarc-for-davmail" class="md-nav__link">
+  <a href="#running-parsedmarcd" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring parsedmarc for DavMail
+      Running parsedmarcd
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Running parsedmarcd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrating-existing-cli-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating Existing CLI arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-parsedmarcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring parsedmarcd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-your-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating Your Config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating Your Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mailbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      mailbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imap" class="md-nav__link">
+    <span class="md-ellipsis">
+      imap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      msgraph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      elasticsearch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opensearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      opensearch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splunk_hec" class="md-nav__link">
+    <span class="md-ellipsis">
+      splunk_hec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      kafka
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      smtp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      s3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syslog" class="md-nav__link">
+    <span class="md-ellipsis">
+      syslog
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gmail_api" class="md-nav__link">
+    <span class="md-ellipsis">
+      gmail_api
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gelf" class="md-nav__link">
+    <span class="md-ellipsis">
+      gelf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      webhook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -466,26 +660,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../migrating/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Migrating to parsedmarcd
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1725,20 +1899,194 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#running-davmail-as-a-systemd-service" class="md-nav__link">
+  <a href="#application-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Running DavMail as a systemd service
+      Application Architecture
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuring-parsedmarc-for-davmail" class="md-nav__link">
+  <a href="#running-parsedmarcd" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuring parsedmarc for DavMail
+      Running parsedmarcd
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Running parsedmarcd">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#migrating-existing-cli-arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating Existing CLI arguments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-parsedmarcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring parsedmarcd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-your-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating Your Config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating Your Config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      general
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mailbox" class="md-nav__link">
+    <span class="md-ellipsis">
+      mailbox
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imap" class="md-nav__link">
+    <span class="md-ellipsis">
+      imap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#msgraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      msgraph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      elasticsearch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#opensearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      opensearch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splunk_hec" class="md-nav__link">
+    <span class="md-ellipsis">
+      splunk_hec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      kafka
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      smtp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      s3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#syslog" class="md-nav__link">
+    <span class="md-ellipsis">
+      syslog
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gmail_api" class="md-nav__link">
+    <span class="md-ellipsis">
+      gmail_api
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log_analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      log_analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gelf" class="md-nav__link">
+    <span class="md-ellipsis">
+      gelf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      webhook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1760,155 +2108,197 @@
   
 
 
-<h1 id="accessing-an-inbox-using-owaews">Accessing an inbox using OWA/EWS<a class="headerlink" href="#accessing-an-inbox-using-owaews" title="Permanent link">🔗</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Starting in 8.0.0, parsedmarc supports accessing Microsoft/Office 365
-inboxes via the Microsoft Graph API, which is preferred over Davmail.</p>
-</div>
-<p>Some organizations do not allow IMAP or the Microsoft Graph API,
-and only support Exchange Web Services (EWS)/Outlook Web Access (OWA).
-In that case, Davmail will need to be set up
-as a local EWS/OWA IMAP gateway. It can even work where
-<a href="https://davmail.sourceforge.net/faq.html">Modern Auth/multi-factor authentication</a> is required.</p>
-<p>To do this, download the latest <code>davmail-version.zip</code> from
-<a href="https://sourceforge.net/projects/davmail/files/">https://sourceforge.net/projects/davmail/files/</a></p>
-<p>Extract the zip using the <code>unzip</code> command.</p>
-<p>Install Java:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>default-jre-headless
-</code></pre></div>
-<p>Configure Davmail by creating a <code>davmail.properties</code> file</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># DavMail settings, see http://davmail.sourceforge.net/ for documentation</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">#############################################################</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Basic settings</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># Server or workstation mode</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="na">davmail.server</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># connection mode auto, EWS or WebDav</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="na">davmail.enableEws</span><span class="o">=</span><span class="s">auto</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="c1"># base Exchange OWA or EWS url</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="na">davmail.url</span><span class="o">=</span><span class="s">https://outlook.office365.com/EWS/Exchange.asmx</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># Listener ports</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="na">davmail.imapPort</span><span class="o">=</span><span class="s">1143</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1">#############################################################</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="c1"># Network settings</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="c1"># Network proxy settings</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="na">davmail.enableProxy</span><span class="o">=</span><span class="s">false</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="na">davmail.useSystemProxies</span><span class="o">=</span><span class="s">false</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="na">davmail.proxyHost</span><span class="o">=</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="na">davmail.proxyPort</span><span class="o">=</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="na">davmail.proxyUser</span><span class="o">=</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="na">davmail.proxyPassword</span><span class="o">=</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="c1"># proxy exclude list</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="na">davmail.noProxyFor</span><span class="o">=</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="c1"># block remote connection to DavMail</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="na">davmail.allowRemote</span><span class="o">=</span><span class="s">false</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="c1"># bind server sockets to the loopback address</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="na">davmail.bindAddress</span><span class="o">=</span><span class="s">127.0.0.1</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="c1"># disable SSL for specified listeners</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="na">davmail.ssl.nosecureimap</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="c1"># Send keepalive character during large folder and messages download</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="na">davmail.enableKeepalive</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="c1"># Message count limit on folder retrieval</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="na">davmail.folderSizeLimit</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="c1">#############################################################</span>
-<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="c1"># IMAP settings</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>
-<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="c1"># Delete messages immediately on IMAP STORE \Deleted flag</span>
-<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="na">davmail.imapAutoExpunge</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>
-<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="c1"># Enable IDLE support, set polling delay in minutes</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="na">davmail.imapIdleDelay</span><span class="o">=</span><span class="s">1</span>
-<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>
-<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="c1"># Always reply to IMAP RFC822.SIZE requests with Exchange approximate</span>
-<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="c1"># message size for performance reasons</span>
-<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="na">davmail.imapAlwaysApproxMsgSize</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
-<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="c1"># Client connection timeout in seconds - default 300, 0 to disable</span>
-<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="na">davmail.clientSoTimeout</span><span class="o">=</span><span class="s">0</span>
-<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>
-<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="c1">#############################################################</span>
-</code></pre></div>
-<h2 id="running-davmail-as-a-systemd-service">Running DavMail as a systemd service<a class="headerlink" href="#running-davmail-as-a-systemd-service" title="Permanent link">🔗</a></h2>
-<p>Use systemd to run <code>davmail</code> as a service.</p>
-<p>Create a system user</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>davmail<span class="w"> </span>-r<span class="w"> </span>-s<span class="w"> </span>/bin/false
-</code></pre></div>
-<p>Protect the <code>davmail</code> configuration file from prying eyes</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>root:davmail<span class="w"> </span>/opt/davmail/davmail.properties
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo<span class="w"> </span>chmod<span class="w"> </span><span class="nv">u</span><span class="o">=</span>rw,g<span class="o">=</span>r,o<span class="o">=</span><span class="w"> </span>/opt/davmail/davmail.properties
-</code></pre></div>
-<p>Create the service configuration file</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/systemd/system/davmail.service
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">[Unit]</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">DavMail gateway service</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="na">Documentation</span><span class="o">=</span><span class="s">https://sourceforge.net/projects/davmail/</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="na">After</span><span class="o">=</span><span class="s">syslog.target network.target</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">[Service]</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/opt/davmail/davmail /opt/davmail/davmail.properties</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="na">User</span><span class="o">=</span><span class="s">davmail</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="na">Group</span><span class="o">=</span><span class="s">davmail</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="na">RestartSec</span><span class="o">=</span><span class="s">5m</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="k">[Install]</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
-</code></pre></div>
-<p>Then, enable the service</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>parsedmarc.service
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>sudo<span class="w"> </span>service<span class="w"> </span>davmail<span class="w"> </span>restart
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You must also run the above commands whenever you edit
-<code>davmail.service</code>.</p>
-</div>
+<h1 id="migrating-to-parsedmarcd">Migrating to <code>parsedmarcd</code><a class="headerlink" href="#migrating-to-parsedmarcd" title="Permanent link">🔗</a></h1>
+<p>In version <code>9.0.0</code> (TBC) ParseDMARC introduced a new application for processing reports and although there are many benefit of this new application it is incompatible with the existing CLI application. To avoid confusion we will use the specific application name when talking about ParseDMARC:</p>
+<ul>
+<li><code>parsedmarc</code> is the original CLI application that you know and love.</li>
+<li><code>parsedmarcd</code> is the new application.</li>
+</ul>
+<h2 id="application-architecture">Application Architecture<a class="headerlink" href="#application-architecture" title="Permanent link">🔗</a></h2>
+<p>The primary difference between the two applications is in how they pass reports from some source to some destination.</p>
+<p><code>parsedmarc</code> was designed to run on batches of reports with all reports being collected and processed from some source before being sent to some destination. This meant to process the continous stream of DMARC reports you'd have to either run <code>parsedmarc</code> on a timer (e.g. as a CRON job), or if you were collecting reports directly from an email mailbox run <code>parsedmarc</code> using <code>--watch</code> to check for new emails. This mode of operation did allow for reporting on all reports at once (e.g. as a CSV attachment to an email) as all reports were processed at the same time.</p>
+<p>In comparison <code>parsedmarcd</code> is designed to operate as a service on a stream of reports with reports being sent to the destinations as they come available. Once a report is processed, <code>parsedmarcd</code> will notifiy the source with the status (e.g. <code>SUCCESS</code>, <code>ERROR</code>) so that the source can take appropriate action (e.g. deleting the email on <code>SUCCESS</code>, or sending it to a dead-letter-queue on <code>ERROR</code>). This streaming model with feedback allows for more robust processing of reports and lower memory consumption.</p>
+<p>Another key difference is that in <code>parsedmarc</code> you could only provide one config for each type of section. This meant that if you wanted to have the same item configured multiple time (i.e. because you had multiple IMAP mailboxes to monitor), then you would have to run <code>parsedmarc</code> multiple times. With <code>parsedmarcd</code> items use a unique user-defined name allowing you to repeat the same type of item with different configuration.</p>
+<p>You can find the full details about the <a href="architecture.md">new application architecture here</a>.</p>
+<h2 id="running-parsedmarcd">Running <code>parsedmarcd</code><a class="headerlink" href="#running-parsedmarcd" title="Permanent link">🔗</a></h2>
+<p><code>parsedmarcd</code> is designed to run as a service and as such most configuration is done through configuration files. For the purposes of this guide know that you can run the application using <code>parsedmarcd --config /path/to/config.yml</code> and stop it using <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>.</p>
+<p>For deeper information about configuring and running <code>parsedmarcd</code> see:</p>
+<ul>
+<li><a href="quickstart.md">Quickstart</a></li>
+<li><a href="installing.md">Installing ParseDMARC</a></li>
+<li><a href="configuration.md">Configuring ParseDMARC</a></li>
+<li><a href="running.md">Running ParseDMARC</a></li>
+</ul>
+<h3 id="migrating-existing-cli-arguments">Migrating Existing CLI arguments<a class="headerlink" href="#migrating-existing-cli-arguments" title="Permanent link">🔗</a></h3>
+<p><code>file_path</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.</p>
+<p><code>--help</code>/<code>-h</code>: no changes.</p>
+<p><code>--config-file</code>/<code>-c</code>: moved to <code>--config</code>. For more information see <a href="#configuring-parsedmarc">Configure <code>parsedmarcd</code> below</a>.</p>
+<p><code>--strip-attachment-payloads</code>: not supported - use config <code>parser.strip_attachment_payloads</code> instead.</p>
+<p><code>--output</code>/<code>-o</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.</p>
+<p><code>--aggregate-json-filename</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.</p>
+<p><code>--forensic-json-filename</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.</p>
+<p><code>--aggregate-csv-filename</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.</p>
+<p><code>--forensic-csv-filename</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.</p>
+<p><code>--nameservers</code>/<code>-n</code>: not supported - use config <code>parser.nameservers</code> instead.</p>
+<p><code>--dns-timeout</code>/<code>-t</code>: not supported - use config <code>parser.dns_timeout</code> instead.</p>
+<p><code>--offline</code>: not supported - use config <code>parser.offline</code> instead.</p>
+<p><code>--silent</code>/<code>-s</code>: not supported.</p>
+<p><code>--verbose</code>: now supports using <code>-v</code> and up to 3 levels of verbosity (e.g. <code>-vvv</code>).</p>
+<p><code>--debug</code>: not supported - use <code>--verbose</code>/<code>-v</code> instead.</p>
+<p><code>--log-file</code>: not supported - use <code>--log-dir</code> instead.</p>
+<p><code>--version</code>/<code>-v</code>: <code>--version</code> is unchanged. <code>-v</code> no longer prints the version - it instead is used for <code>--verbose</code>.</p>
+<h2 id="configuring-parsedmarcd">Configuring <code>parsedmarcd</code><a class="headerlink" href="#configuring-parsedmarcd" title="Permanent link">🔗</a></h2>
+<p><code>parsedmarcd</code> uses YAML (or JSON) for configuration. This allows for much richer configuration but also requires migrating your old config to the new format.</p>
+<p>At this point it important to make sure you understand some key terminology:</p>
+<ul>
+<li><strong>Source</strong>: something that collects or otherwise produces reports for processing.</li>
+<li><strong>Sink</strong>: something that receives parsed reports.</li>
+</ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Always restart the service every time you upgrade to a new version of
-<code>davmail</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>service<span class="w"> </span>davmail<span class="w"> </span>restart
-</code></pre></div>
+<p>Currently <code>parsedmarcd</code> only supports have one sink configured. This is a known drawback and will be changed in the future.</p>
 </div>
-<p>To check the status of the service, run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>service<span class="w"> </span>davmail<span class="w"> </span>status
+<div class="highlight"><span class="filename">example-config.yml</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">parser</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">nameservers</span><span class="p">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.1.1.1</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8.8.8.8</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">sources</span><span class="p">:</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">aws-ses-dev</span><span class="p">:</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.aws:SimpleEmailService</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">session</span><span class="p">:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nt">profile_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-dev-profile</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">queue_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-dev-dmarc-receiving</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">sinks</span><span class="p">:</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">elasticsearch</span><span class="p">:</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="nt">class</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">.elasticsearch:Elasticsearch</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">client</span><span class="p">:</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">localhost:9200</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">elastic</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SECRET</span>
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the event of a crash, systemd will restart the service after 5
-minutes, but the <code>service davmail status</code> command will only show the
-logs for the current process. To vew the logs for previous runs as
-well as the current process (newest to oldest), run:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>journalctl<span class="w"> </span>-u<span class="w"> </span>davmail.service<span class="w"> </span>-r
-</code></pre></div>
+<p>Each source and sink is configured by giving it a unique name and then providing its <code>class</code> and then any other required configuration.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Because each source and sink is given a unique name you can define the same class multiple times.</p>
 </div>
-<h2 id="configuring-parsedmarc-for-davmail">Configuring parsedmarc for DavMail<a class="headerlink" href="#configuring-parsedmarc-for-davmail" title="Permanent link">🔗</a></h2>
-<p>Because you are interacting with DavMail server over the loopback
-(i.e. <code>127.0.0.1</code>), add the following options to <code>parsedmarc.ini</code>
-config file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">[imap]</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="na">host</span><span class="o">=</span><span class="s">127.0.0.1</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="na">port</span><span class="o">=</span><span class="s">1143</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="na">ssl</span><span class="o">=</span><span class="s">False</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="na">watch</span><span class="o">=</span><span class="s">True</span>
-</code></pre></div>
+<h2 id="migrating-your-config">Migrating Your Config<a class="headerlink" href="#migrating-your-config" title="Permanent link">🔗</a></h2>
+<p>This section documents each item in the <code>parsedmarc</code> config and how to move it to the <code>parsedmarcd</code> config.</p>
+<p>All heading are config options are defined using their original <code>parsedmarc</code> name as they were in version <code>8.15.0</code>.</p>
+<h3 id="general"><code>general</code><a class="headerlink" href="#general" title="Permanent link">🔗</a></h3>
+<p><code>save_aggregate</code>: not supported - no comparable option.</p>
+<p><code>save_forensic</code>: not supported - no comparable option.</p>
+<p><code>save_smtp_tls</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/5">GitHub Issue #5</a>.
+<code>strip_attachment_payloads</code>: moved to <code>parser.strip_attachment_payloads</code></p>
+<p><code>output</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.
+<code>aggregate_json_filename</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.</p>
+<p><code>forensic_json_filename</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/24">GitHub Issue #24</a>.</p>
+<p><code>ip_db_path</code>: moved to <code>parser.ip_db_path</code></p>
+<p><code>offline</code>: moved to <code>parser.offline</code></p>
+<p><code>always_use_local_files</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/10">GitHub Issue #10</a>.</p>
+<p><code>local_reverse_dns_map_path</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/10">GitHub Issue #10</a>.</p>
+<p><code>nameservers</code>: moved to <code>parser.nameservers.[]</code></p>
+<p><code>dns_timeout</code>: moved to <code>parse.dns_timeout</code></p>
+<p><code>debug</code>: not supported - use the <code>--verbose</code>/<code>-v</code> commandline option instead.</p>
+<p><code>silent</code>: not supported - no comparable option.</p>
+<p><code>log_file</code>: not supported - use the <code>--log-dir</code> commadline option instead.</p>
+<p><code>n_procs</code>: not supported - no comparable option.</p>
+<h3 id="mailbox"><code>mailbox</code><a class="headerlink" href="#mailbox" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.email:MailboxConnectionSource</code> Source.</p>
+<p><code>reports_folder</code>: no changes.</p>
+<p><code>archive_folder</code>: no changes.</p>
+<p><code>watch</code>: not supported - no comparable option.</p>
+<p><code>delete</code>: not supported - use <code>mode: "delete"</code> instead.</p>
+<p><code>test</code>: not supported - use <code>mode: "test"</code> instead.</p>
+<p><code>batch_size</code>: not supported - no comparable option.</p>
+<p><code>check_timeout</code>: not supported - no comparable option.</p>
+<h3 id="imap"><code>imap</code><a class="headerlink" href="#imap" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.email:Imap</code> Source.</p>
+<p><code>host</code>: no changes.</p>
+<p><code>port</code>: now optional and will select the appropriate default port based on SSL/TLS settings.</p>
+<p><code>ssl</code>: no changes.</p>
+<p><code>skip_certificate_verification</code>: moved to <code>verify_ssl</code>.</p>
+<p><code>user</code>: moved to <code>username</code></p>
+<p><code>password</code>: no changes.</p>
+<h3 id="msgraph"><code>msgraph</code><a class="headerlink" href="#msgraph" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.email.MicosoftGraph</code> Source.</p>
+<p><code>auth_method</code>: no changes.</p>
+<p><code>user</code>: moved to <code>username</code>.</p>
+<p><code>password</code>: no changes.</p>
+<p><code>client_id</code>: no changes.</p>
+<p><code>client_secret</code>: no changes.</p>
+<p><code>tenant_id</code>: no changes.</p>
+<p><code>mailbox</code>: no changes.</p>
+<p><code>token_file</code>: no changes.</p>
+<p><code>allow_unencrypted_storage</code>: no changes.</p>
+<h3 id="elasticsearch"><code>elasticsearch</code><a class="headerlink" href="#elasticsearch" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.elasticsearch:Elasticsearch</code> Sink.</p>
+<p><code>hosts</code>: moved to <code>client.hosts</code>.</p>
+<p><code>user</code>: moved to <code>client.username</code>.</p>
+<p><code>password</code>: moved to <code>client.password</code>.</p>
+<p><code>apiKey</code>: moved to <code>client.api_key</code>.</p>
+<p><code>ssl</code>: moved to <code>client.use_ssl</code>.</p>
+<p><code>timeout</code>: moved to <code>client.timeout</code>.</p>
+<p><code>cert_path</code>: moved to <code>client.ssl_cert_path</code>.</p>
+<p><code>index_suffix</code>: moved to <code>client.index_suffix</code>.</p>
+<p><code>index_prefix</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/12">GitHub Issue #12</a>.</p>
+<p><code>monthly_indexes</code>: moved to <code>client.monthly_indexes</code>.</p>
+<p><code>number_of_shards</code>: moved to <code>client.number_of_shards</code>.</p>
+<p><code>number_of_replicas</code>: moved to <code>client.number_of_replicas</code>.</p>
+<h3 id="opensearch"><code>opensearch</code><a class="headerlink" href="#opensearch" title="Permanent link">🔗</a></h3>
+<p>Not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/6">GitHub issue #6</a>.</p>
+<h3 id="splunk_hec"><code>splunk_hec</code><a class="headerlink" href="#splunk_hec" title="Permanent link">🔗</a></h3>
+<p>Not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/27">GitHub Issue #27</a>.</p>
+<h3 id="kafka"><code>kafka</code><a class="headerlink" href="#kafka" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.kafka:Kafka</code> Sink.</p>
+<p><code>hosts</code>: moved to <code>client.hosts</code>.</p>
+<p><code>user</code>: moved to <code>client.username</code>.</p>
+<p><code>password</code>: moved to <code>client.password</code>.</p>
+<p><code>ssl</code>: moved to <code>client.ssl</code>.</p>
+<p><code>skip_certificate_verification</code>: moved to <code>client.skip_certificate_verification</code>.</p>
+<p><code>aggregate_topic</code>: moved to <code>aggregate_report_topic</code>.</p>
+<p><code>forensic_topic</code>: moved to <code>forensic_report_topic</code>.</p>
+<h3 id="smtp"><code>smtp</code><a class="headerlink" href="#smtp" title="Permanent link">🔗</a></h3>
+<p>Not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/29">GitHub Issue #29</a>.</p>
+<h3 id="s3"><code>s3</code><a class="headerlink" href="#s3" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.aws:S3</code> Sink.</p>
+<p><code>bucket</code>: no changes.</p>
+<p><code>path</code>: moved to <code>path_prefix</code>.</p>
+<p><code>region_name</code>: moved to <code>client.region_name</code>.</p>
+<p><code>endpoint_url</code>: moved to <code>client.endpoint_url</code>.</p>
+<p><code>access_key_id</code>: moved to <code>client.aws_access_key_id</code>.</p>
+<p><code>secret_access_key</code>: moved to <code>client.aws_secret_access_key</code>.</p>
+<h3 id="syslog"><code>syslog</code><a class="headerlink" href="#syslog" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.syslog:Syslog</code> Sink.</p>
+<p><code>server</code>: moved to <code>syslog_host</code>.</p>
+<p><code>port</code>: moved to <code>syslog_port</code>.</p>
+<h3 id="gmail_api"><code>gmail_api</code><a class="headerlink" href="#gmail_api" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.email:Google</code> Source.</p>
+<p><code>credentials_file</code>: no changes.</p>
+<p><code>token_file</code>: no changes.</p>
+<p><code>include_spam_trash</code>: no changes.</p>
+<p><code>scopes</code>: no changes.</p>
+<p><code>oauth2_port</code>: no changes.</p>
+<p><code>paginate_messages</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/14">GitHub Issue #14</a>.</p>
+<h3 id="log_analytics"><code>log_analytics</code><a class="headerlink" href="#log_analytics" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.azure:LogAnalytics</code> Sink.</p>
+<p><code>client_id</code>: no changes.</p>
+<p><code>client_secret</code>: no changes.</p>
+<p><code>tenant_id</code>: no changes.</p>
+<p><code>dce</code>: moved to <code>data_collection_endpoint</code>.</p>
+<p><code>dcr_immutable_id</code>: moved to <code>data_collection_rule_id</code>.</p>
+<p><code>dcr_aggreate_stream</code>: moved to <code>aggregate_report_stream</code>.</p>
+<p><code>dcr_forensic_stream</code>: moved to <code>forensic_report_stream</code>.</p>
+<p><code>dcr_smtp_tls_stream</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/5">GitHub Issue #5</a>.</p>
+<h3 id="gelf"><code>gelf</code><a class="headerlink" href="#gelf" title="Permanent link">🔗</a></h3>
+<p>Not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/13">GitHub Issue #13</a>.</p>
+<h3 id="webhook"><code>webhook</code><a class="headerlink" href="#webhook" title="Permanent link">🔗</a></h3>
+<p>Use a <code>.webhook:JsonWebhook</code> Sink.</p>
+<p><code>aggregate_url</code>: moved to <code>dmarc_aggregate_url</code>.</p>
+<p><code>forensic_url</code>: moved to <code>dmarc_forensic_url</code>.</p>
+<p><code>smtp_tls_url</code>: not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/5">GitHub Issue #5</a>.</p>
+<p><code>timeout</code>: moved to <code>http_timeout</code>.</p>
 
 
 

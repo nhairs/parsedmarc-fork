@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://nhairs.github.io/parsedmarc-fork/latest/contributing/">
       
       
-        <link rel="prev" href="../davmail/">
+        <link rel="prev" href="../migrating/">
       
       
         <link rel="next" href="../dmarc/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Contributing to parsedmarc - ParseDMARC Fork</title>
+        <title>Contributing - ParseDMARC Fork</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contributing-to-parsedmarc" class="md-skip">
+        <a href="#contributing" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contributing to parsedmarc
+              Contributing
             
           </span>
         </div>
@@ -416,6 +416,26 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrating/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrating to parsedmarcd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -432,7 +452,7 @@
           
   
   <span class="md-ellipsis">
-    Contributing to parsedmarc
+    Contributing
   </span>
   
 
@@ -443,7 +463,7 @@
         
   
   <span class="md-ellipsis">
-    Contributing to parsedmarc
+    Contributing
   </span>
   
 
@@ -465,11 +485,128 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bug-reports" class="md-nav__link">
+  <a href="#code-of-conduct" class="md-nav__link">
     <span class="md-ellipsis">
-      Bug reports
+      Code of Conduct
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Request Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pull Request Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-find-something-to-work-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Find something to work on
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fork-the-repository-and-make-your-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fork the repository and make your changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Code review
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-source-or-sink" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Source or Sink
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a Source or Sink">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Tasks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versioning-and-breaking-compatability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versioning and breaking compatability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spelling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contacting-the-maintainers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contacting the Maintainers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -508,10 +645,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -522,8 +659,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             DMARC
           </label>
@@ -603,10 +740,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -617,8 +754,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             API Reference
           </label>
@@ -682,7 +819,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_1" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1" >
         
           
           
@@ -698,14 +835,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1">
             <span class="md-nav__icon md-icon"></span>
             <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> parsedmarc
           </label>
@@ -892,7 +1029,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_1_9" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1_9" >
         
           
           
@@ -908,14 +1045,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_9" id="__nav_11_1_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_12_1_9" id="__nav_12_1_9_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_1_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_9">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_1_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1_9">
             <span class="md-nav__icon md-icon"></span>
             <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> mail
           </label>
@@ -1085,7 +1222,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_1_12" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1_12" >
         
           
           
@@ -1101,14 +1238,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_12" id="__nav_11_1_12_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_12_1_12" id="__nav_12_1_12_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_1_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_12">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1_12">
             <span class="md-nav__icon md-icon"></span>
             <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> resources
           </label>
@@ -1185,6 +1322,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -1196,7 +1343,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_1_14" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1_14" >
         
           
           
@@ -1212,19 +1359,61 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_14" id="__nav_11_1_14_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_12_1_14" id="__nav_12_1_14_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_1_14_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_14">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_1_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1_14">
             <span class="md-nav__icon md-icon"></span>
             <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> sink
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/parsedmarc/sink/aws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> aws
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/parsedmarc/sink/azure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> azure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -1276,11 +1465,74 @@
   
   
     <li class="md-nav__item">
+      <a href="../reference/parsedmarc/sink/kafka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> kafka
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/parsedmarc/sink/syslog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> syslog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../reference/parsedmarc/sink/util/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> util
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/parsedmarc/sink/webhook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> webhook
   </span>
   
 
@@ -1332,7 +1584,7 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11_1_15" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1_15" >
         
           
           
@@ -1348,14 +1600,14 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_11_1_15" id="__nav_11_1_15_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_12_1_15" id="__nav_12_1_15_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_1_15_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11_1_15">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_12_1_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12_1_15">
             <span class="md-nav__icon md-icon"></span>
             <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> source
           </label>
@@ -1581,11 +1833,128 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#bug-reports" class="md-nav__link">
+  <a href="#code-of-conduct" class="md-nav__link">
     <span class="md-ellipsis">
-      Bug reports
+      Code of Conduct
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pull-request-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Request Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pull Request Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-find-something-to-work-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Find something to work on
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fork-the-repository-and-make-your-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fork the repository and make your changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Checklist
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-code-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Code review
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Topics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-source-or-sink" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a Source or Sink
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adding a Source or Sink">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Tasks
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#versioning-and-breaking-compatability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Versioning and breaking compatability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spelling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spelling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contacting-the-maintainers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contacting the Maintainers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1607,10 +1976,97 @@
   
 
 
-<h1 id="contributing-to-parsedmarc">Contributing to parsedmarc<a class="headerlink" href="#contributing-to-parsedmarc" title="Permanent link">🔗</a></h1>
-<h2 id="bug-reports">Bug reports<a class="headerlink" href="#bug-reports" title="Permanent link">🔗</a></h2>
-<p>Please report bugs on the GitHub issue tracker</p>
-<p><a href="https://github.com/domainaware/parsedmarc/issues">https://github.com/domainaware/parsedmarc/issues</a></p>
+<h1 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">🔗</a></h1>
+<p>Contributions are welcome!</p>
+<h2 id="code-of-conduct">Code of Conduct<a class="headerlink" href="#code-of-conduct" title="Permanent link">🔗</a></h2>
+<p>In general we follow the <a href="https://policies.python.org/python.org/code-of-conduct/">Python Software Foundation Code of Conduct</a> (note: we are not affiliated with the PSF).</p>
+<h2 id="pull-request-process">Pull Request Process<a class="headerlink" href="#pull-request-process" title="Permanent link">🔗</a></h2>
+<p><strong>0. Before you begin</strong></p>
+<p>If you're not familiar with contributing to open source software, <a href="https://opensource.guide/how-to-contribute/">start by reading this guide</a>.</p>
+<p>Be aware that anything you contribute will be licenced under <a href="https://github.com/nhairs/python-json-logger/blob/main/LICENSE">the project's licence</a>. If you are making a change as a part of your job, be aware that your employer might own your work and you'll need their permission in order to licence the code.</p>
+<h3 id="1-find-something-to-work-on">1. Find something to work on<a class="headerlink" href="#1-find-something-to-work-on" title="Permanent link">🔗</a></h3>
+<p>Where possible it's best to stick to established issues where discussion has already taken place. Contributions that haven't come from a discussed issue are less likely to be accepted. A good place to start is the <a href="https://github.com/nhairs/parsedmarc-fork/issues?q=is%3Aissue+is%3Aopen+label%3A%22open+for+work%22"><code>open for work</code></a> issue label.</p>
+<p>The following are things that can be worked on without an existing issue:</p>
+<ul>
+<li>Updating documentation. This includes fixing in-code documentation / comments, and the overall docs.</li>
+<li>Small changes that don't change functionality such as refactoring or adding / updating tests.</li>
+</ul>
+<h3 id="2-fork-the-repository-and-make-your-changes">2. Fork the repository and make your changes<a class="headerlink" href="#2-fork-the-repository-and-make-your-changes" title="Permanent link">🔗</a></h3>
+<p>We don't have styling documentation, so where possible try to match existing code. This includes the use of "headings" and "dividers" (this will make sense when you look at the code).</p>
+<p>All devlopment tooling can be installed (usually into a virtual environment), using the <code>dev</code> optional dependency:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;.[dev]&#39;</span><span class="sb">`</span>
+</code></pre></div>
+<p>Before creating your pull request you'll want to format your code and run the linters and tests:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Format</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>black<span class="w"> </span>src<span class="w"> </span>tests
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Lint</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>pylint<span class="w"> </span>--output-format<span class="o">=</span>colorized<span class="w"> </span>src
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>mypy<span class="w"> </span>src<span class="w"> </span>tests
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># Tests</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>pytest
+</code></pre></div>
+<p>If making changes to the documentation you can preview the changes locally using <code>mkdocs</code>. Changes to the README can be previewed using <a href="https://github.com/joeyespo/grip"><code>grip</code></a> (not included in <code>dev</code> dependencies).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdocs<span class="w"> </span>serve
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In general we will always squash merge pull requests so you do not need to worry about a "clean" commit history.</p>
+</div>
+<h3 id="3-checklist">3. Checklist<a class="headerlink" href="#3-checklist" title="Permanent link">🔗</a></h3>
+<p>Before pushing and creating your pull request, you should make sure you've done the following:</p>
+<ul>
+<li>Updated any relevant tests.</li>
+<li>Formatted your code and run the linters and tests.</li>
+<li>Updated the version number in <code>pyproject.toml</code>. In general using a <code>.devN</code> suffix is acceptable.
+  This is not required for changes that do no affect the code such as documentation.</li>
+<li>Add details of the changes to the change log (<code>docs/change-log.md</code>), creating a new section if needed.</li>
+<li>Add notes for new / changed features in the relevant docstring.</li>
+</ul>
+<p><strong>4. Create your pull request</strong></p>
+<p>When creating your pull request be aware that the title and description will be used for the final commit so pay attention to them.</p>
+<p>Your pull request description should include the following:</p>
+<ul>
+<li>Why the pull request is being made</li>
+<li>Summary of changes</li>
+<li>How the pull request was tested - especially if not covered by unit testing.</li>
+</ul>
+<p>Once you've submitted your pull request make sure that all CI jobs are passing. Pull requests with failing jobs will not be reviewed.</p>
+<h3 id="5-code-review">5. Code review<a class="headerlink" href="#5-code-review" title="Permanent link">🔗</a></h3>
+<p>Your code will be reviewed by a maintainer.</p>
+<p>If you're not familiar with code review start by reading <a href="https://google.github.io/eng-practices/review/">this guide</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Remember you are not your work</p>
+<p>You might be asked to explain or justify your choices. This is not a criticism of your value as a person!</p>
+<p>Often this is because there are multiple ways to solve the same problem and the reviewer would like to understand more about the way you solved.</p>
+</div>
+<h2 id="common-topics">Common Topics<a class="headerlink" href="#common-topics" title="Permanent link">🔗</a></h2>
+<h3 id="adding-a-source-or-sink">Adding a Source or Sink<a class="headerlink" href="#adding-a-source-or-sink" title="Permanent link">🔗</a></h3>
+<p>New sources and sinks are welcome, how popular / common a service is will be taken into consideration before being added. You should open an issue before creating a pull request.</p>
+<h4 id="common-tasks">Common Tasks<a class="headerlink" href="#common-tasks" title="Permanent link">🔗</a></h4>
+<p>When adding a new source or sink you will need to pay attention to the following:</p>
+<ul>
+<li>Ensure that all type annotations on <code>Source</code>, <code>Sink</code>, and their config classes are Python 3.8 compatible as these are inspected during runtime.<ul>
+<li>For example this means using <code>List[str]</code> instead of <code>list[str]</code> and <code>Union[str, int, None]</code> instead of <code>str | int | None</code>.</li>
+<li>For all other annotations using the latest styles is okay.</li>
+</ul>
+</li>
+<li>Ensure that the class and the config class have appropriate docstrings.</li>
+<li>Update / create the relevant source / sink documention.</li>
+<li>Update <code>tests/test_source_sink_config</code> to ensure basic intialisation.</li>
+</ul>
+<h3 id="versioning-and-breaking-compatability">Versioning and breaking compatability<a class="headerlink" href="#versioning-and-breaking-compatability" title="Permanent link">🔗</a></h3>
+<p>This project uses semantic versioning.</p>
+<p>In general backwards compatability is always preferred. This library is widely used and not particularly sophisticated and as such there must be a good reason for breaking changes.</p>
+<p>Feature changes MUST be compatible with all <a href="https://endoflife.date/python">security supported versions of Python</a> and SHOULD be compatible with all unsupported versions of Python where <a href="https://pypistats.org/packages/parsedmarc">recent downloads over the last 90 days exceeds 5% of all downloads</a>.</p>
+<p>In general, only the latest <code>major.minor</code> version of ParseDMARC is supported. Bug fixes and feature backports requiring a version branch may be considered but must be discussed with the maintainers first.</p>
+<p>See also <a href="../security/">Security Policy</a>.</p>
+<h3 id="spelling">Spelling<a class="headerlink" href="#spelling" title="Permanent link">🔗</a></h3>
+<p>The original implementation of this project used US spelling so it will continue to use US spelling for all code.</p>
+<p>Documentation is more flexible and may use a variety of English spellings.</p>
+<h3 id="contacting-the-maintainers">Contacting the Maintainers<a class="headerlink" href="#contacting-the-maintainers" title="Permanent link">🔗</a></h3>
+<p>In general it is preferred to keep communication to GitHub, e.g. through comments on issues and pull requests. If you do need to contact the maintainers privately, please do so using the email addresses in the maintainers section of the <code>pyproject.toml</code>.</p>
 
 
 
