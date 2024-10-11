@@ -28,6 +28,43 @@ For deeper information about configuring and running `parsedmarcd` see:
 - [Configuring ParseDMARC](configuration.md)
 - [Running ParseDMARC](running.md)
 
+### Migrating Existing CLI arguments
+
+`file_path`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+
+`--help`/`-h`: no changes.
+
+`--config-file`/`-c`: moved to `--config`. For more information see [Configure `parsedmarcd` below](#configuring-parsedmarc).
+
+`--strip-attachment-payloads`: not supported - use config `parser.strip_attachment_payloads` instead.
+
+`--output`/`-o`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+
+`--aggregate-json-filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+
+`--forensic-json-filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+
+`--aggregate-csv-filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+
+`--forensic-csv-filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+
+`--nameservers`/`-n`: not supported - use config `parser.nameservers` instead.
+
+`--dns-timeout`/`-t`: not supported - use config `parser.dns_timeout` instead.
+
+`--offline`: not supported - use config `parser.offline` instead.
+
+`--silent`/`-s`: not supported.
+
+`--verbose`: now supports using `-v` and up to 3 levels of verbosity (e.g. `-vvv`).
+
+`--debug`: not supported - use `--verbose`/`-v` instead.
+
+`--log-file`: not supported - use `--log-dir` instead.
+
+`--version`/`-v`: `--version` is unchanged. `-v` no longer prints the version - it instead is used for `--verbose`.
+
+
 ## Configuring `parsedmarcd`
 
 `parsedmarcd` uses YAML (or JSON) for configuration. This allows for much richer configuration but also requires migrating your old config to the new format.
@@ -69,7 +106,7 @@ Each source and sink is configured by giving it a unique name and then providing
 
 
 
-### Migrating Your Config
+## Migrating Your Config
 
 This section documents each item in the `parsedmarc` config and how to move it to the `parsedmarcd` config.
 
@@ -78,7 +115,7 @@ All heading are config options are defined using their original `parsedmarc` nam
 !!! warning "TODO"
     list all config items within each section, don't just say "use this".
 
-#### `general`
+### `general`
 
 `save_aggregate`: not supported - no comparable option.
 
@@ -113,7 +150,7 @@ All heading are config options are defined using their original `parsedmarc` nam
 `n_procs`: not supported - no comparable option.
 
 
-#### `mailbox`
+### `mailbox`
 
 Use a `.email:MailboxConnectionSource` Source.
 
@@ -132,7 +169,7 @@ Use a `.email:MailboxConnectionSource` Source.
 `check_timeout`: not supported - no comparable option.
 
 
-#### `imap`
+### `imap`
 
 Use a `.email:Imap` Source.
 
@@ -149,7 +186,7 @@ Use a `.email:Imap` Source.
 `password`: no changes.
 
 
-#### `msgraph`
+### `msgraph`
 
 Use a `.email.MicosoftGraph` Source.
 
@@ -172,7 +209,7 @@ Use a `.email.MicosoftGraph` Source.
 `allow_unencrypted_storage`: no changes.
 
 
-#### `elasticsearch`
+### `elasticsearch`
 
 Use a `.elasticsearch:Elasticsearch` Sink.
 
@@ -201,17 +238,17 @@ Use a `.elasticsearch:Elasticsearch` Sink.
 `number_of_replicas`: moved to `client.number_of_replicas`.
 
 
-#### `opensearch`
+### `opensearch`
 
 Not supported - [GitHub issue #6](https://github.com/nhairs/parsedmarc-fork/issues/6).
 
 
-#### `splunk_hec`
+### `splunk_hec`
 
 Not supported - [GitHub Issue #27](https://github.com/nhairs/parsedmarc-fork/issues/27).
 
 
-#### `kafka`
+### `kafka`
 
 Use a `.kafka:Kafka` Sink.
 
@@ -230,12 +267,12 @@ Use a `.kafka:Kafka` Sink.
 `forensic_topic`: moved to `forensic_report_topic`.
 
 
-#### `smtp`
+### `smtp`
 
 Not supported - [GitHub Issue #29](https://github.com/nhairs/parsedmarc-fork/issues/29).
 
 
-#### `s3`
+### `s3`
 
 Use a `.aws:S3` Sink.
 
@@ -252,7 +289,7 @@ Use a `.aws:S3` Sink.
 `secret_access_key`: moved to `client.aws_secret_access_key`.
 
 
-#### `syslog`
+### `syslog`
 
 Use a `.syslog:Syslog` Sink.
 
@@ -261,7 +298,7 @@ Use a `.syslog:Syslog` Sink.
 `port`: moved to `syslog_port`.
 
 
-#### `gmail_api`
+### `gmail_api`
 
 Use a `.email:Google` Source.
 
@@ -278,7 +315,7 @@ Use a `.email:Google` Source.
 `paginate_messages`: not supported - [GitHub Issue #14](https://github.com/nhairs/parsedmarc-fork/issues/14).
 
 
-#### `log_analytics`
+### `log_analytics`
 
 Use a `.azure:LogAnalytics` Sink.
 
@@ -299,12 +336,12 @@ Use a `.azure:LogAnalytics` Sink.
 `dcr_smtp_tls_stream`: not supported - [GitHub Issue #5](https://github.com/nhairs/parsedmarc-fork/issues/5).
 
 
-#### `gelf`
+### `gelf`
 
 Not supported - [GitHub Issue #13](https://github.com/nhairs/parsedmarc-fork/issues/13).
 
 
-#### `webhook`
+### `webhook`
 
 Use a `.webhook:JsonWebhook` Sink.
 
