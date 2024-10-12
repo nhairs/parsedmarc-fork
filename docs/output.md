@@ -1,5 +1,8 @@
 # Sample outputs
 
+!!! warning
+    This documentation has not been reviewed for version `9.0.0`. Please consider submitting a pull request to update it.
+
 ## Sample aggregate report output
 
 Here are the results from parsing the [example](https://dmarc.org/wiki/FAQ#I_need_to_implement_aggregate_reports.2C_what_do_they_look_like.3F)
