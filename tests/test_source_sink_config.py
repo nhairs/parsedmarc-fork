@@ -14,6 +14,7 @@ from parsedmarc.parser import ReportParser
 from parsedmarc.sink.base import Sink
 import parsedmarc.sink.elasticsearch
 import parsedmarc.sink.util
+import parsedmarc.sink.webhook
 import parsedmarc.source.aws
 from parsedmarc.source.base import Source
 import parsedmarc.source.email
@@ -96,10 +97,15 @@ def test_source_init(class_: Type[Source], config: Dict[str, Any]):
     "class_, config",
     [
         # ElasticSearch
-        (parsedmarc.sink.elasticsearch.Elasticsearch, {"client": {"foo": "bar"}}),
+        (parsedmarc.sink.elasticsearch.Elasticsearch, {"client": {"hosts": "foo"}}),
         # Util
         (parsedmarc.sink.util.Noop, {}),
         (parsedmarc.sink.util.Console, {}),
+        # Webhook
+        (
+            parsedmarc.sink.webhook.JsonWebhook,
+            {"aggregate_report_url": "foo", "forensic_report_url": "bar"},
+        ),
     ],
 )
 def test_sink_init(class_: Type[Sink], config: Dict[str, Any]):

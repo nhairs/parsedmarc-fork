@@ -1,5 +1,8 @@
 # Elasticsearch and Kibana
 
+!!! warning
+    This documentation has not been reviewed for version `9.0.0`. Please consider submitting a pull request to update it.
+
 To set up visual dashboards of DMARC data, install Elasticsearch and Kibana.
 
 !!! note
@@ -128,7 +131,7 @@ server.ssl.key: /etc/kibana/kibana.key
     ```text
     elasticsearch.hosts: ['https://SERVER_IP:9200']
     ```
-    => 
+    =>
     ```text
     elasticsearch.hosts: ['https://127.0.0.1:9200']
     ```

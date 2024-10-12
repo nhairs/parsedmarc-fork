@@ -4,7 +4,10 @@
 from __future__ import annotations
 
 # Standard Library
-from typing import Any, Dict, Literal
+from typing import List, Literal, Union
+
+# Installed
+from pydantic import BaseModel
 
 # Local
 from ..const import AppState
@@ -29,7 +32,19 @@ class Elasticsearch(Sink):
         self._state = AppState.SETTING_UP
 
         try:
-            self.client = ElasticsearchClient(**self.config.client)
+            self.client = ElasticsearchClient(
+                hosts=self.config.client.hosts,
+                use_ssl=self.config.client.ssl,
+                ssl_cert_path=self.config.client.cert_path,
+                username=self.config.client.username,
+                password=self.config.client.password,
+                api_key=self.config.client.api_key,
+                timeout=self.config.client.timeout,
+                index_suffix=self.config.index_suffix,
+                monthly_indexes=self.config.monthly_indexes,
+                number_of_shards=self.config.number_of_shards,
+                number_of_replicas=self.config.number_of_replicas,
+            )
             self.client.migrate_indexes()
 
         except:
@@ -68,6 +83,21 @@ class Elasticsearch(Sink):
 class ElasticsearchConfig(BaseConfig):
     """Elasticsearch Config"""
 
-    # As per https://elasticsearch-py.readthedocs.io/en/v8.13.0/api/elasticsearch.html
-    client: Dict[str, Any]
+    client: ElasticsearchClientConfig
+    index_suffix: Union[str, None] = None
+    monthly_indexes: bool = True
+    number_of_shards: int = 1
+    number_of_replicas: int = 0
     on_duplicate: Literal["discard"] = "discard"  # TODO: implement update logic and add
+
+
+class ElasticsearchClientConfig(BaseModel):
+    """Elasticsearch Client Config"""
+
+    hosts: Union[str, List[str]]
+    ssl: bool = False
+    cert_path: Union[str, None] = None
+    username: Union[str, None] = None
+    password: Union[str, None] = None
+    api_key: Union[str, None] = None
+    timeout: float = 60.0

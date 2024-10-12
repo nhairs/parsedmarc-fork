@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 # Standard Library
-from typing import Dict
+from typing import Dict, Union
 
 # Installed
 import requests
@@ -52,11 +52,11 @@ class JsonWebhook(Sink):
         return
 
     def process_aggregate_report(self, report: AggregateReport) -> None:
-        self.send_report(report.data, self.config.dmarc_aggregate_url)
+        self.send_report(report.data, self.config.aggregate_report_url)
         return
 
     def process_forensic_report(self, report: ForensicReport) -> None:
-        self.send_report(report.data, self.config.dmarc_forensic_url)
+        self.send_report(report.data, self.config.forensic_report_url)
         return
 
     def send_report(self, report: dict, url: str) -> None:
@@ -68,9 +68,9 @@ class JsonWebhook(Sink):
 class JsonWebhookConfig(BaseConfig):
     """JsonWebhook Config"""
 
-    http_headers: Dict[str, str] | None = None
+    http_headers: Union[Dict[str, str], None] = None
     http_timeout: int = 60
 
     # URLs
-    dmarc_aggregate_url: str
-    dmarc_forensic_url: str
+    aggregate_report_url: str
+    forensic_report_url: str
