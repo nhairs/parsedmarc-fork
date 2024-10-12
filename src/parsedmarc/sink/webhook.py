@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 # Standard Library
-from typing import Dict
+from typing import Dict, Union
 
 # Installed
 import requests
@@ -68,7 +68,7 @@ class JsonWebhook(Sink):
 class JsonWebhookConfig(BaseConfig):
     """JsonWebhook Config"""
 
-    http_headers: Dict[str, str] | None = None
+    http_headers: Union[Dict[str, str], None] = None
     http_timeout: int = 60
 
     # URLs
