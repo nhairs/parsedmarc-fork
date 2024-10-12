@@ -115,125 +115,81 @@ All heading are config options are defined using their original `parsedmarc` nam
 
 ### `general`
 
-`save_aggregate`: not supported - no comparable option.
-
-`save_forensic`: not supported - no comparable option.
-
-`save_smtp_tls`: not supported - [GitHub Issue #5](https://github.com/nhairs/parsedmarc-fork/issues/5).
-`strip_attachment_payloads`: moved to `parser.strip_attachment_payloads`
-
-`output`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
-`aggregate_json_filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
-
-`forensic_json_filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
-
-`ip_db_path`: moved to `parser.ip_db_path`
-
-`offline`: moved to `parser.offline`
-
-`always_use_local_files`: not supported - [GitHub Issue #10](https://github.com/nhairs/parsedmarc-fork/issues/10).
-
-`local_reverse_dns_map_path`: not supported - [GitHub Issue #10](https://github.com/nhairs/parsedmarc-fork/issues/10).
-
-`nameservers`: moved to `parser.nameservers.[]`
-
-`dns_timeout`: moved to `parse.dns_timeout`
-
-`debug`: not supported - use the `--verbose`/`-v` commandline option instead.
-
-`silent`: not supported - no comparable option.
-
-`log_file`: not supported - use the `--log-dir` commadline option instead.
-
-`n_procs`: not supported - no comparable option.
+- `save_aggregate`: not supported - no comparable option.
+- `save_forensic`: not supported - no comparable option.
+- `save_smtp_tls`: not supported - [GitHub Issue #5](https://github.com/nhairs/parsedmarc-fork/issues/5).
+- `strip_attachment_payloads`: moved to `parser.strip_attachment_payloads`.
+- `output`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+- `aggregate_json_filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+- `forensic_json_filename`: not supported - [GitHub Issue #24](https://github.com/nhairs/parsedmarc-fork/issues/24).
+- `ip_db_path`: moved to `parser.ip_db_path`
+- `offline`: moved to `parser.offline`.
+- `always_use_local_files`: not supported - [GitHub Issue #10](https://github.com/nhairs/parsedmarc-fork/issues/10).
+- `local_reverse_dns_map_path`: not supported - [GitHub Issue #10](https://github.com/nhairs/parsedmarc-fork/issues/10).
+- `nameservers`: moved to `parser.nameservers`.
+- `dns_timeout`: moved to `parse.dns_timeout`.
+- `debug`: not supported - use the `--verbose`/`-v` commandline option instead.
+- `silent`: not supported - no comparable option.
+- `log_file`: not supported - use the `--log-dir` commadline option instead.
+- `n_procs`: not supported - no comparable option.
 
 
 ### `mailbox`
 
 Use a `.email:MailboxConnectionSource` Source.
 
-`reports_folder`: no changes.
-
-`archive_folder`: no changes.
-
-`watch`: not supported - no comparable option.
-
-`delete`: not supported - use `mode: "delete"` instead.
-
-`test`: not supported - use `mode: "test"` instead.
-
-`batch_size`: not supported - no comparable option.
-
-`check_timeout`: not supported - no comparable option.
+- `reports_folder`: no changes.
+- `archive_folder`: no changes.
+- `watch`: not supported - no comparable option.
+- `delete`: not supported - use `mode: "delete"` instead.
+- `test`: not supported - use `mode: "test"` instead.
+- `batch_size`: not supported - no comparable option.
+- `check_timeout`: not supported - no comparable option.
 
 
 ### `imap`
 
 Use a `.email:Imap` Source.
 
-`host`: no changes.
-
-`port`: now optional and will select the appropriate default port based on SSL/TLS settings.
-
-`ssl`: no changes.
-
-`skip_certificate_verification`: moved to `verify_ssl`.
-
-`user`: moved to `username`
-
-`password`: no changes.
+- `host`: no changes.
+- `port`: now optional and will select the appropriate default port based on SSL/TLS settings.
+- `ssl`: no changes.
+- `skip_certificate_verification`: moved to `verify_ssl`.
+- `user`: moved to `username`.
+- `password`: no changes.
 
 
 ### `msgraph`
 
 Use a `.email.MicosoftGraph` Source.
 
-`auth_method`: no changes.
-
-`user`: moved to `username`.
-
-`password`: no changes.
-
-`client_id`: no changes.
-
-`client_secret`: no changes.
-
-`tenant_id`: no changes.
-
-`mailbox`: no changes.
-
-`token_file`: no changes.
-
-`allow_unencrypted_storage`: no changes.
+- `auth_method`: no changes.
+- `user`: moved to `username`.
+- `password`: no changes.
+- `client_id`: no changes.
+- `client_secret`: no changes.
+- `tenant_id`: no changes.
+- `mailbox`: no changes.
+- `token_file`: no changes.
+- `allow_unencrypted_storage`: no changes.
 
 
 ### `elasticsearch`
 
 Use a `.elasticsearch:Elasticsearch` Sink.
 
-`hosts`: moved to `client.hosts`.
-
-`user`: moved to `client.username`.
-
-`password`: moved to `client.password`.
-
-`apiKey`: moved to `client.api_key`.
-
-`ssl`: moved to `client.use_ssl`.
-
-`timeout`: moved to `client.timeout`.
-
-`cert_path`: moved to `client.ssl_cert_path`.
-
-`index_suffix`: moved to `client.index_suffix`.
-
-`index_prefix`: not supported - [GitHub Issue #12](https://github.com/nhairs/parsedmarc-fork/issues/12).
-
-`monthly_indexes`: moved to `client.monthly_indexes`.
-
-`number_of_shards`: moved to `client.number_of_shards`.
-
-`number_of_replicas`: moved to `client.number_of_replicas`.
+- `hosts`: moved to `client.hosts`.
+- `user`: moved to `client.username`.
+- `password`: moved to `client.password`.
+- `apiKey`: moved to `client.api_key`.
+- `ssl`: moved to `client.ssl`.
+- `timeout`: moved to `client.timeout`.
+- `cert_path`: moved to `client.cert_path`.
+- `index_suffix`: no changes.
+- `index_prefix`: not supported - [GitHub Issue #12](https://github.com/nhairs/parsedmarc-fork/issues/12).
+- `monthly_indexes`: no changes.
+- `number_of_shards`: no changes.
+- `number_of_replicas`: no changes.
 
 
 ### `opensearch`
@@ -250,19 +206,13 @@ Not supported - [GitHub Issue #27](https://github.com/nhairs/parsedmarc-fork/iss
 
 Use a `.kafka:Kafka` Sink.
 
-`hosts`: moved to `client.hosts`.
-
-`user`: moved to `client.username`.
-
-`password`: moved to `client.password`.
-
-`ssl`: moved to `client.ssl`.
-
-`skip_certificate_verification`: moved to `client.skip_certificate_verification`.
-
-`aggregate_topic`: moved to `aggregate_report_topic`.
-
-`forensic_topic`: moved to `forensic_report_topic`.
+- `hosts`: moved to `client.hosts`.
+- `user`: moved to `client.username`.
+- `password`: moved to `client.password`.
+- `ssl`: moved to `client.ssl`.
+- `skip_certificate_verification`: moved to `client.skip_certificate_verification`.
+- `aggregate_topic`: moved to `aggregate_report_topic`.
+- `forensic_topic`: moved to `forensic_report_topic`.
 
 
 ### `smtp`
@@ -274,64 +224,46 @@ Not supported - [GitHub Issue #29](https://github.com/nhairs/parsedmarc-fork/iss
 
 Use a `.aws:S3` Sink.
 
-`bucket`: no changes.
-
-`path`: moved to `path_prefix`.
-
-`region_name`: moved to `client.region_name`.
-
-`endpoint_url`: moved to `client.endpoint_url`.
-
-`access_key_id`: moved to `client.aws_access_key_id`.
-
-`secret_access_key`: moved to `client.aws_secret_access_key`.
+- `bucket`: no changes.
+- `path`: moved to `path_prefix`.
+- `region_name`: moved to `client.region_name`.
+- `endpoint_url`: moved to `client.endpoint_url`.
+- `access_key_id`: moved to `client.aws_access_key_id`.
+- `secret_access_key`: moved to `client.aws_secret_access_key`.
 
 
 ### `syslog`
 
 Use a `.syslog:Syslog` Sink.
 
-`server`: moved to `syslog_host`.
-
-`port`: moved to `syslog_port`.
+- `server`: moved to `syslog_host`.
+- `port`: moved to `syslog_port`.
 
 
 ### `gmail_api`
 
 Use a `.email:Google` Source.
 
-`credentials_file`: no changes.
-
-`token_file`: no changes.
-
-`include_spam_trash`: no changes.
-
-`scopes`: no changes.
-
-`oauth2_port`: no changes.
-
-`paginate_messages`: not supported - [GitHub Issue #14](https://github.com/nhairs/parsedmarc-fork/issues/14).
+- `credentials_file`: no changes.
+- `token_file`: no changes.
+- `include_spam_trash`: no changes.
+- `scopes`: no changes.
+- `oauth2_port`: no changes.
+- `paginate_messages`: not supported - [GitHub Issue #14](https://github.com/nhairs/parsedmarc-fork/issues/14).
 
 
 ### `log_analytics`
 
 Use a `.azure:LogAnalytics` Sink.
 
-`client_id`: no changes.
-
-`client_secret`: no changes.
-
-`tenant_id`: no changes.
-
-`dce`: moved to `data_collection_endpoint`.
-
-`dcr_immutable_id`: moved to `data_collection_rule_id`.
-
-`dcr_aggreate_stream`: moved to `aggregate_report_stream`.
-
-`dcr_forensic_stream`: moved to `forensic_report_stream`.
-
-`dcr_smtp_tls_stream`: not supported - [GitHub Issue #5](https://github.com/nhairs/parsedmarc-fork/issues/5).
+- `client_id`: no changes.
+- `client_secret`: no changes.
+- `tenant_id`: no changes.
+- `dce`: moved to `data_collection_endpoint`.
+- `dcr_immutable_id`: moved to `data_collection_rule_id`.
+- `dcr_aggreate_stream`: moved to `aggregate_report_stream`.
+- `dcr_forensic_stream`: moved to `forensic_report_stream`.
+- `dcr_smtp_tls_stream`: not supported - [GitHub Issue #5](https://github.com/nhairs/parsedmarc-fork/issues/5).
 
 
 ### `gelf`
@@ -343,10 +275,7 @@ Not supported - [GitHub Issue #13](https://github.com/nhairs/parsedmarc-fork/iss
 
 Use a `.webhook:JsonWebhook` Sink.
 
-`aggregate_url`: moved to `dmarc_aggregate_url`.
-
-`forensic_url`: moved to `dmarc_forensic_url`.
-
-`smtp_tls_url`: not supported - [GitHub Issue #5](https://github.com/nhairs/parsedmarc-fork/issues/5).
-
-`timeout`: moved to `http_timeout`.
+- `aggregate_url`: moved to `aggregate_report_url`.
+- `forensic_url`: moved to `forensic_report_url`.
+- `smtp_tls_url`: not supported - [GitHub Issue #5](https://github.com/nhairs/parsedmarc-fork/issues/5).
+- `timeout`: moved to `http_timeout`.

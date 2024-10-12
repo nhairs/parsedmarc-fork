@@ -2,10 +2,10 @@
 
 ## Supported Versions
 
-Security support for Python JSON Logger is provided for all [security supported versions of Python](https://endoflife.date/python) and for unsupported versions of Python where [recent downloads over the last 90 days exceeds 5% of all downloads](https://pypistats.org/packages/parsedmarc).
+Security support for ParseDMARC is provided for all [security supported versions of Python](https://endoflife.date/python) and for unsupported versions of Python where [recent downloads over the last 90 days exceeds 5% of all downloads](https://pypistats.org/packages/parsedmarc).
 
 
-As of 2024-09-07 security support is provided for Python versions `3.8+`.
+As of 2024-10-12 security support is provided for Python versions `3.8+`.
 
 
 ## Reporting a Vulnerability

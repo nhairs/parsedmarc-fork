@@ -32,7 +32,19 @@ class Elasticsearch(Sink):
         self._state = AppState.SETTING_UP
 
         try:
-            self.client = ElasticsearchClient(**dict(self.config.client))
+            self.client = ElasticsearchClient(
+                hosts=self.config.client.hosts,
+                use_ssl=self.config.client.ssl,
+                ssl_cert_path=self.config.client.cert_path,
+                username=self.config.client.username,
+                password=self.config.client.password,
+                api_key=self.config.client.api_key,
+                timeout=self.config.client.timeout,
+                index_suffix=self.config.index_suffix,
+                monthly_indexes=self.config.monthly_indexes,
+                number_of_shards=self.config.number_of_shards,
+                number_of_replicas=self.config.number_of_replicas,
+            )
             self.client.migrate_indexes()
 
         except:
@@ -72,18 +84,20 @@ class ElasticsearchConfig(BaseConfig):
     """Elasticsearch Config"""
 
     client: ElasticsearchClientConfig
+    index_suffix: Union[str, None] = None
+    monthly_indexes: bool = True
+    number_of_shards: int = 1
+    number_of_replicas: int = 0
     on_duplicate: Literal["discard"] = "discard"  # TODO: implement update logic and add
 
 
 class ElasticsearchClientConfig(BaseModel):
+    """Elasticsearch Client Config"""
+
     hosts: Union[str, List[str]]
-    use_ssl: bool = False
-    ssl_cert_path: Union[str, None] = None
+    ssl: bool = False
+    cert_path: Union[str, None] = None
     username: Union[str, None] = None
     password: Union[str, None] = None
     api_key: Union[str, None] = None
     timeout: float = 60.0
-    index_suffix: Union[str, None] = None
-    monthly_index: bool = True
-    number_of_shards: int = 1
-    number_of_replicas: int = 0

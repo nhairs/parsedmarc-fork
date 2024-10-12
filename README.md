@@ -1,10 +1,10 @@
 # parsedmarc-fork
 
-ParseDMARC-Fork (name TBD) is a tool for collecting, parsing, and storing DMARC reports.
+ParseDMARC is a tool for collecting, parsing, and storing DMARC reports.
 
 ### 🚨 Important 🚨
 
-This repository is a work in progress fork of [domainaware/parsedmarc](https://github.com/domainaware/parsedmarc).
+This repository is an expimental fork of [domainaware/parsedmarc](https://github.com/domainaware/parsedmarc). See [Issue #1](https://github.com/nhairs/parsedmarc-fork/issues/1) for details.
 
 ## Documentation
 

@@ -2,7 +2,7 @@ site_name: "ParseDMARC Fork"
 site_url: https://nhairs.github.io/parsedmarc-fork
 repo_url: https://github.com/nhairs/parsedmarc-fork
 edit_uri: tree/main/docs
-copyright: "Copyright &copy; Parsedmarc Contributors</a>"
+copyright: "Copyright &copy; ParseDMARC Fork Contributors</a>"
 watch:
   - mkdocs.yml
   - README.md
@@ -11,19 +11,24 @@ watch:
 
 nav:
   - "Home": index.md
-  - installation.md
-  - usage.md
-  - output.md
-  - elasticsearch.md
-  - kibana.md
-  - splunk.md
-  - davmail.md
-  - migrating.md
-  - contributing.md
-  # - changelog.md
-  - DMARC:
+  - quickstart.md
+  - Guide:
+    - installation.md
+    - usage.md
+    - output.md
+    - elasticsearch.md
+    - kibana.md
+    - splunk.md
+    - davmail.md
+    - migrating.md
+  - About DMARC:
     - dmarc.md
     - mailing-lists.md
+  - security.md
+  - Development:
+    - contributing.md
+    - architecture.md
+  # - changelog.md
   - API Reference: reference/
 
 theme:
