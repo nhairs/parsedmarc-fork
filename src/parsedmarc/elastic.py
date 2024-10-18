@@ -194,6 +194,7 @@ class ElasticsearchClient:
         api_key: str | None = None,
         timeout: float = 60.0,
         index_suffix: str | None = None,
+        index_prefix: str = "",
         monthly_indexes: bool = True,
         number_of_shards: int = 1,
         number_of_replicas: int = 0,
@@ -230,8 +231,8 @@ class ElasticsearchClient:
         self.client = Elasticsearch(**conn_params)  # type: ignore[arg-type]
 
         ## Other settings
-        self.aggregate_index_base = "dmarc_aggregate"
-        self.forensic_index_base = "dmarc_forensic"
+        self.aggregate_index_base = f"{index_prefix}dmarc_aggregate"
+        self.forensic_index_base = f"{index_prefix}dmarc_forensic"
 
         if index_suffix:
             self.aggregate_index_base += f"_{index_suffix}"
