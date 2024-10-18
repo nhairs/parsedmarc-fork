@@ -41,6 +41,7 @@ class Elasticsearch(Sink):
                 api_key=self.config.client.api_key,
                 timeout=self.config.client.timeout,
                 index_suffix=self.config.index_suffix,
+                index_prefix=self.config.index_prefix,
                 monthly_indexes=self.config.monthly_indexes,
                 number_of_shards=self.config.number_of_shards,
                 number_of_replicas=self.config.number_of_replicas,
@@ -85,6 +86,7 @@ class ElasticsearchConfig(BaseConfig):
 
     client: ElasticsearchClientConfig
     index_suffix: Union[str, None] = None
+    index_prefix: str = ""
     monthly_indexes: bool = True
     number_of_shards: int = 1
     number_of_replicas: int = 0

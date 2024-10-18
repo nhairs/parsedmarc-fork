@@ -186,7 +186,7 @@ Use a `.elasticsearch:Elasticsearch` Sink.
 - `timeout`: moved to `client.timeout`.
 - `cert_path`: moved to `client.cert_path`.
 - `index_suffix`: no changes.
-- `index_prefix`: not supported - [GitHub Issue #12](https://github.com/nhairs/parsedmarc-fork/issues/12).
+- `index_prefix`: no changes.
 - `monthly_indexes`: no changes.
 - `number_of_shards`: no changes.
 - `number_of_replicas`: no changes.
