@@ -5,7 +5,7 @@ from __future__ import annotations
 
 # Standard Library
 import datetime
-from typing import List, Literal, Union
+from typing import Any, List, Literal, Union
 
 # Installed
 import opensearchpy
@@ -43,8 +43,6 @@ class OpenSearch(Sink):
     config: OpenSearchConfig
 
     INDEX_VERSION: int = 2
-    AGGREGATE_INDEX: str = "dmarc_aggregate"
-    FORENSIC_INDEX: str = "dmarc_forensic"
 
     def setup(self) -> None:
         if self._state != AppState.SHUTDOWN:
@@ -52,9 +50,41 @@ class OpenSearch(Sink):
         self._state = AppState.SETTING_UP
 
         try:
-            self.client = opensearchpy.OpenSearch(
-                hosts=self.config.client.hosts,
-            )
+            ## Prepare index names
+            self.aggregate_index_base = f"{self.config.index_prefix}dmarc_aggregate"
+            self.forensic_index_base = f"{self.config.index_prefix}dmarc_forensic"
+
+            if self.config.index_suffix:
+                self.aggregate_index_base += f"_{self.config.index_suffix}"
+                self.forensic_index_base += f"_{self.config.index_suffix}"
+
+            ## Create client
+            kwargs: dict[str, Any] = {"timeout": self.config.client.timeout}
+
+            if isinstance(self.config.client.hosts, str):
+                kwargs["hosts"] = [self.config.client.hosts]
+            else:
+                kwargs["hosts"] = self.config.client.hosts
+
+            if self.config.client.username:
+                kwargs["http_auth"] = f"{self.config.client.username}:{self.config.client.password}"
+
+            if self.config.client.api_key:
+                kwargs["api_key"] = self.config.client.api_key
+
+            if self.config.client.ssl:
+                kwargs["use_ssl"] = True
+                if self.config.client.cert_path:
+                    kwargs["verify_certs"] = True
+                    kwargs["ca_certs"] = self.config.client.cert_path
+                else:
+                    kwargs["verify_certs"] = False
+            else:
+                kwargs["use_ssl"] = False
+
+            self.client = opensearchpy.OpenSearch(**kwargs)
+
+            ## Migrate old indexes
             self._migrate_indexes()
 
         except:
@@ -93,7 +123,7 @@ class OpenSearch(Sink):
         end_date_query = Q(dict(match=dict(date_end=end_date)))
         # pylint: enable=use-dict-literal
 
-        search = Search(index=self._format_search_index(self.AGGREGATE_INDEX), using=self.client)
+        search = Search(index=f"{self.aggregate_index_base}*", using=self.client)
         search.query = (
             org_name_query & report_id_query & domain_query & begin_date_query & end_date_query
         )
@@ -102,15 +132,15 @@ class OpenSearch(Sink):
 
         if len(existing) > 0:
             if self.config.on_duplicate == "discard":
-                self.warning(
-                    f"An aggregate report ID {report_id} from {org_name} about {domain} with a date range of {begin_date} to {end_date} already exists in OpenSearch"
+                self.info(
+                    f"Discarding duplicate report: ID {report_id} from {org_name} about {domain} with a date range of {begin_date} to {end_date}"
                 )
                 return
             # We should not get to here, but just in case
             raise RuntimeError("Duplicate report without way to handle")
 
         ## Create Index
-        index = self._format_index_name(self.AGGREGATE_INDEX, begin_date)
+        index = self._get_index_name(self.aggregate_index_base, begin_date)
         self._create_indexes(index)
 
         ## Save Agrgegate Report Records
@@ -190,7 +220,7 @@ class OpenSearch(Sink):
 
         arrival_date = human_timestamp_to_datetime(data["arrival_date_utc"])
 
-        search = Search(index=self._format_search_index(self.FORENSIC_INDEX), using=self.client)
+        search = Search(index=f"{self.forensic_index_base}*", using=self.client)
         arrival_query = {"match": {"arrival_date": arrival_date}}
         q = Q(arrival_query)
 
@@ -215,15 +245,15 @@ class OpenSearch(Sink):
 
         if len(existing) > 0:
             if self.config.on_duplicate == "discard":
-                self.warning(
-                    f"A forensic sample to {to_} from {from_} with a subject of {subject} and arrival date of {arrival_date} already exists"
+                self.info(
+                    f"Discarding duplicate sample: to {to_} from {from_} with a subject of {subject} and arrival date of {arrival_date}"
                 )
                 return
             # We should not get to here, but just in case
             raise RuntimeError("Duplicate report without way to handle")
 
         ## Create Index
-        index = self._format_index_name(self.FORENSIC_INDEX, arrival_date)
+        index = self._get_index_name(self.forensic_index_base, arrival_date)
         self._create_indexes(index)
 
         ## Save Forensic Report
@@ -280,6 +310,20 @@ class OpenSearch(Sink):
 
     ## Internal Methods
     ## -------------------------------------------------------------------------
+    def _get_index_name(self, base: str, date: datetime.datetime) -> str:
+        """Format an index based on our settings
+
+        Args:
+            base: base index name
+            date: date to use to generate index
+        """
+        if self.config.monthly_indexes:
+            index_date = date.strftime("%Y-%m")
+        else:
+            index_date = date.strftime("%Y-%m-%d")
+
+        return f"{base}-{index_date}"
+
     def _create_indexes(self, names: list[str] | str) -> None:
         """
         Create OpenSearch indexes
@@ -353,30 +397,6 @@ class OpenSearch(Sink):
         # nothingtodohere.png
         return
 
-    def _format_index_name(self, index: str, date: datetime.datetime) -> str:
-        """Format an index based on our settings"""
-        index = f"{self.config.index_prefix}{index}"
-
-        if self.config.index_suffix:
-            index = f"{index}_{self.config.index_suffix}"
-
-        if self.config.monthly_indexes:
-            index_date = date.strftime("%Y-%m")
-        else:
-            index_date = date.strftime("%Y-%m-%d")
-
-        index = f"{index}-{index_date}"
-        return index
-
-    def _format_search_index(self, index: str) -> str:
-        """Format an index for searching based on our settings"""
-        index = f"{self.config.index_prefix}{index}"
-
-        if self.config.index_suffix:
-            index = f"{index}_{self.config.index_suffix}"
-
-        return f"{index}*"
-
 
 ## Config Classes
 ## -----------------------------------------------------------------------------
@@ -401,7 +421,7 @@ class OpenSearchClientConfig(BaseModel):
     username: Union[str, None] = None
     password: Union[str, None] = None
     api_key: Union[str, None] = None
-    timeout: float = 60.0
+    timeout: int = 60
 
 
 ## OpenSearch Document Classes

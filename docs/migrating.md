@@ -194,8 +194,20 @@ Use a `.elasticsearch:Elasticsearch` Sink.
 
 ### `opensearch`
 
-Not supported - [GitHub issue #6](https://github.com/nhairs/parsedmarc-fork/issues/6).
+Use a `.opensearch:OpenSearch` Sink.
 
+- `hosts`: moved to `client.hosts`.
+- `user`: moved to `client.username`.
+- `password`: moved to `client.password`.
+- `apiKey`: moved to `client.api_key`.
+- `ssl`: moved to `client.ssl`.
+- `timeout`: moved to `client.timeout`.
+- `cert_path`: moved to `client.cert_path`.
+- `index_suffix`: no changes.
+- `index_prefix`: no changes.
+- `monthly_indexes`: no changes.
+- `number_of_shards`: no changes.
+- `number_of_replicas`: no changes.
 
 ### `splunk_hec`
 
