@@ -61,6 +61,7 @@ dependencies = [
     "lxml>=4.4.0",
     "mailsuite>=1.6.1",
     "msgraph-core>=0.2.2,<1.0.0",  # msgraph-core 1.0 has breaking changes
+    "opensearch-py>=2.4.2,<=3.0.0",
     "orjson",
     "pillar>=0.3.0",
     "publicsuffixlist>=0.10.0",
