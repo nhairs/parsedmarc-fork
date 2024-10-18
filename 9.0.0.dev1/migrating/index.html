@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.32">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.30">
     
     
       
@@ -1590,6 +1590,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -1728,6 +1732,48 @@
   
   <span class="md-ellipsis">
     <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> kafka
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/parsedmarc/sink/opensearch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> opensearch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/parsedmarc/sink/splunk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    <code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> splunk
   </span>
   
 
@@ -2451,7 +2497,13 @@
 <h3 id="opensearch"><code>opensearch</code><a class="headerlink" href="#opensearch" title="Permanent link">🔗</a></h3>
 <p>Not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/6">GitHub issue #6</a>.</p>
 <h3 id="splunk_hec"><code>splunk_hec</code><a class="headerlink" href="#splunk_hec" title="Permanent link">🔗</a></h3>
-<p>Not supported - <a href="https://github.com/nhairs/parsedmarc-fork/issues/27">GitHub Issue #27</a>.</p>
+<p>Use a <code>.splunk:Splunk</code> Sink.</p>
+<ul>
+<li><code>url</code>: moved to <code>client.url</code>.</li>
+<li><code>token</code>: moved to <code>client.token</code>.</li>
+<li><code>index</code>: no changes.</li>
+<li><code>skip_certification_verification</code>: moved to <code>client.verify_ssl</code>.</li>
+</ul>
 <h3 id="kafka"><code>kafka</code><a class="headerlink" href="#kafka" title="Permanent link">🔗</a></h3>
 <p>Use a <code>.kafka:Kafka</code> Sink.</p>
 <ul>
@@ -2459,7 +2511,7 @@
 <li><code>user</code>: moved to <code>client.username</code>.</li>
 <li><code>password</code>: moved to <code>client.password</code>.</li>
 <li><code>ssl</code>: moved to <code>client.ssl</code>.</li>
-<li><code>skip_certificate_verification</code>: moved to <code>client.skip_certificate_verification</code>.</li>
+<li><code>skip_certificate_verification</code>: moved to <code>client.verify_ssl</code>.</li>
 <li><code>aggregate_topic</code>: moved to <code>aggregate_report_topic</code>.</li>
 <li><code>forensic_topic</code>: moved to <code>forensic_report_topic</code>.</li>
 </ul>
@@ -2587,7 +2639,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.indexes", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.471ce7a9.min.js"></script>
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
       
     
   </body>

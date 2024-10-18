@@ -22,6 +22,8 @@
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> base](parsedmarc/sink/base.md)
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> elasticsearch](parsedmarc/sink/elasticsearch.md)
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> kafka](parsedmarc/sink/kafka.md)
+        * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> opensearch](parsedmarc/sink/opensearch.md)
+        * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> splunk](parsedmarc/sink/splunk.md)
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> syslog](parsedmarc/sink/syslog.md)
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> util](parsedmarc/sink/util.md)
         * [<code class="doc-symbol doc-symbol-nav doc-symbol-module"></code> webhook](parsedmarc/sink/webhook.md)
