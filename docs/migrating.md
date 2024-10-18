@@ -215,7 +215,7 @@ Use a `.kafka:Kafka` Sink.
 - `user`: moved to `client.username`.
 - `password`: moved to `client.password`.
 - `ssl`: moved to `client.ssl`.
-- `skip_certificate_verification`: moved to `client.skip_certificate_verification`.
+- `skip_certificate_verification`: moved to `client.verify_ssl`.
 - `aggregate_topic`: moved to `aggregate_report_topic`.
 - `forensic_topic`: moved to `forensic_report_topic`.
 
