@@ -16,7 +16,7 @@ from .base import BaseConfig, Sink
 ### CLASSES
 ### ============================================================================
 class Splunk(Sink):
-    """Sink that stores reports using the SPlunk HTTP Events Collector (HEX)
+    """Sink that stores reports using the SPlunk HTTP Events Collector (HEC)
 
     References:
 
