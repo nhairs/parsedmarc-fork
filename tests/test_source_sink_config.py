@@ -13,6 +13,7 @@ import pytest
 from parsedmarc.parser import ReportParser
 from parsedmarc.sink.base import Sink
 import parsedmarc.sink.elasticsearch
+import parsedmarc.sink.opensearch
 import parsedmarc.sink.splunk
 import parsedmarc.sink.util
 import parsedmarc.sink.webhook
@@ -99,6 +100,8 @@ def test_source_init(class_: Type[Source], config: Dict[str, Any]):
     [
         # ElasticSearch
         (parsedmarc.sink.elasticsearch.Elasticsearch, {"client": {"hosts": "foo"}}),
+        # OpenSearch
+        (parsedmarc.sink.opensearch.OpenSearch, {"client": {"hosts": "foo"}}),
         # Splunk
         (
             parsedmarc.sink.splunk.Splunk,
