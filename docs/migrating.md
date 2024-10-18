@@ -199,7 +199,12 @@ Not supported - [GitHub issue #6](https://github.com/nhairs/parsedmarc-fork/issu
 
 ### `splunk_hec`
 
-Not supported - [GitHub Issue #27](https://github.com/nhairs/parsedmarc-fork/issues/27).
+Use a `.splunk:Splunk` Sink.
+
+- `url`: moved to `client.url`.
+- `token`: moved to `client.token`.
+- `index`: no changes.
+- `skip_certification_verification`: moved to `client.verify_ssl`.
 
 
 ### `kafka`

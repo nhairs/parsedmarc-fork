@@ -55,6 +55,7 @@ class HECClient:
         """
         parsed = urlparse(url)
         self.url = f"{parsed.scheme}://{parsed.netloc}/services/collector/event/1.0"
+        # TODO: this should probably be "remove_prefix", strip may eat more than intended.
         self.access_token = access_token.lstrip("Splunk ")
         self.index = index
         self.host = socket.getfqdn()
