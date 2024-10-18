@@ -33,12 +33,13 @@ class Kafka(Sink):
         self._state = AppState.SETTING_UP
 
         try:
-            if self.config.client.skip_certificate_verification:
+            if self.config.client.verify_ssl:
+                # Use default context
+                ssl_context = None
+            else:
                 ssl_context = ssl.create_default_context()
                 ssl_context.check_hostname = False
                 ssl_context.verify_mode = ssl.CERT_NONE
-            else:
-                ssl_context = None
 
             self.client = kafkaclient.KafkaClient(
                 kafka_hosts=self.config.client.hosts,
@@ -77,6 +78,6 @@ class KafkaConfig(BaseConfig):
 class KafkaClient(BaseModel):
     hosts: List[str]
     ssl: bool = True
-    skip_certificate_verification: bool = False
+    verify_ssl: bool = True
     username: str | None = None
     password: str | None = None
