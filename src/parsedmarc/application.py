@@ -44,6 +44,10 @@ class StreamApplication(pillar.application.Application):
 
     application_name = "parsedmarcd"
 
+    logging_manifest = pillar.application.LoggingManifest(
+        additional_namespaces=["mailparser"],
+    )
+
     default_config = {
         "parser": {},
         "sources": {},
