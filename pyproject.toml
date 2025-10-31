@@ -63,7 +63,7 @@ dependencies = [
     "msgraph-core>=0.2.2,<1.0.0",  # msgraph-core 1.0 has breaking changes
     "opensearch-py>=2.4.2,<=3.0.0",
     "orjson",
-    "pillar>=0.3.0",
+    "pillar==0.4.0.dev2",
     "publicsuffixlist>=0.10.0",
     "pydantic",
     "requests>=2.22.0",
