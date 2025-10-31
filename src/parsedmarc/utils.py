@@ -19,6 +19,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import time
 from typing import Any, BinaryIO
 import zipfile
 import zlib
@@ -249,6 +250,9 @@ def human_timestamp_to_timestamp(human_timestamp: str) -> float:
     return human_timestamp_to_datetime(human_timestamp).timestamp()
 
 
+_GEO_IP_LAST_AGE_WARNING = 0.0
+
+
 def get_ip_address_country(ip_address: str, db_path: str | None = None) -> str | None:
     """Get the ISO code for the country associated with the given IPv4 or IPv6 address
 
@@ -259,6 +263,7 @@ def get_ip_address_country(ip_address: str, db_path: str | None = None) -> str |
     Returns:
         And ISO country code associated with the given IP address
     """
+    global _GEO_IP_LAST_AGE_WARNING  # pylint: disable=global-statement
     db_paths = [
         "GeoLite2-Country.mmdb",
         "/usr/local/share/GeoIP/GeoLite2-Country.mmdb",
@@ -293,8 +298,9 @@ def get_ip_address_country(ip_address: str, db_path: str | None = None) -> str |
             db_path = str(path)
 
         db_age = datetime.now() - datetime.fromtimestamp(os.stat(db_path).st_mtime)
-        if db_age > timedelta(days=30):
+        if db_age > timedelta(days=30) and (time.time() - _GEO_IP_LAST_AGE_WARNING > 86400):
             logger.warning("IP database is more than a month old")
+            _GEO_IP_LAST_AGE_WARNING = time.time()
 
     db_reader = geoip2.database.Reader(db_path)
 
