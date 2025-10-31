@@ -432,7 +432,7 @@ def is_outlook_msg(content: Any) -> bool:
     Returns:
         If the file is an Outlook MSG file
     """
-    return isinstance(content, bytes) and content.startswith(b"\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1")
+    return isinstance(content, bytes) and content.startswith(b"\xd0\xcf\x11\xe0\xa1\xb1\x1a\xe1")
 
 
 def convert_outlook_msg(msg_bytes: bytes) -> bytes:
