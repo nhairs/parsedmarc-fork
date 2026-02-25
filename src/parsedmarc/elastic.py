@@ -184,7 +184,7 @@ class AlreadySaved(ValueError):
 
 class ElasticsearchClient:
 
-    def __init__(  # pylint: disable=too-many-positional-arguments
+    def __init__(  # pylint: disable=too-many-positional-arguments,unused-argument
         self,
         hosts: str | list[str],
         use_ssl: bool = False,
@@ -217,13 +217,11 @@ class ElasticsearchClient:
         if isinstance(hosts, str):
             hosts = [hosts]
         conn_params = {"hosts": hosts, "timeout": timeout}
-        if use_ssl:
-            conn_params["use_ssl"] = True
-            if ssl_cert_path:
-                conn_params["verify_certs"] = True
-                conn_params["ca_certs"] = ssl_cert_path
-            else:
-                conn_params["verify_certs"] = False
+        if ssl_cert_path:
+            conn_params["verify_certs"] = True
+            conn_params["ca_certs"] = ssl_cert_path
+        else:
+            conn_params["verify_certs"] = False
         if username and password:
             conn_params["http_auth"] = username + ":" + password
         if api_key:
